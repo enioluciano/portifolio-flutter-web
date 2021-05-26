@@ -6,8 +6,6 @@ import 'package:get/get.dart';
 class InitialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print("*********");
-    print(Get.height);
     return Container(
       height: Get.height,
       child: Column(

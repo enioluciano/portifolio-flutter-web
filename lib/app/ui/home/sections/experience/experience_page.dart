@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
+
 import 'package:portifolio_flutter_web/app/models/key.dart';
+import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:timelines/timelines.dart';
 
 class ExperiencePage extends StatelessWidget {
@@ -235,22 +235,38 @@ class ExperiencePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         key: JosKey.keyExperience,
-        color: Colors.grey[100],
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Experiência ",
-                style: TextStyle(
-                    fontSize: 80,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold),
-              ),
+            Row(
+              children: [
+                Expanded(
+                  child: Divider(height: 3, thickness: 3, color: colorB),
+                ),
+                Expanded(
+                  child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Experiência",
+                        style: TextStyle(
+                          fontSize: 45,
+                          color: corSection,
+                          fontWeight: FontWeight.bold,
+                          // decoration: TextDecoration.underline
+                        ),
+                      )),
+                ),
+                Expanded(
+                  child: Divider(
+                    height: 3,
+                    thickness: 3,
+                    color: colorB,
+                  ),
+                ),
+              ],
             ),
             SizedBox(
-              height: 20,
+              height: 80,
             ),
             FixedTimeline.tileBuilder(
               builder: TimelineTileBuilder.connectedFromStyle(
@@ -261,6 +277,11 @@ class ExperiencePage extends StatelessWidget {
                 //   child: Text("aaa: ${x[index]}"),
                 // ),
                 contentsBuilder: (context, index) => Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(color: Colors.blue[100])),
+                  elevation: 10,
+                  shadowColor: colorB,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: list[index],
@@ -274,7 +295,7 @@ class ExperiencePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 60,
             ),
           ],
         )

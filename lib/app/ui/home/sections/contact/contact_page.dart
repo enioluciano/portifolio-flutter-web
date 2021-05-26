@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/home/home_controller.dart';
+import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 class ContactPage extends StatelessWidget {
   final controller = Get.find<HomeController>();
@@ -14,10 +15,32 @@ class ContactPage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text(
-            "Contato",
-            style: TextStyle(
-                fontSize: 80, color: Colors.grey, fontWeight: FontWeight.bold),
+          Row(
+            children: [
+              Expanded(
+                child: Divider(height: 3, thickness: 3, color: colorB),
+              ),
+              Expanded(
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Contato",
+                      style: TextStyle(
+                        fontSize: 45,
+                        color: corSection,
+                        fontWeight: FontWeight.bold,
+                        // decoration: TextDecoration.underline
+                      ),
+                    )),
+              ),
+              Expanded(
+                child: Divider(
+                  height: 3,
+                  thickness: 3,
+                  color: colorB,
+                ),
+              ),
+            ],
           ),
           SizedBox(
             height: 40,
@@ -59,7 +82,7 @@ class ContactPage extends StatelessWidget {
                     )),
               ),
               SizedBox(
-                width: 15,
+                width: 45,
               ),
               InkWell(
                 onTap: () {},
@@ -94,9 +117,12 @@ class ContactPage extends StatelessWidget {
                     )),
               ),
               SizedBox(
-                width: 15,
+                width: 45,
               ),
               InkWell(
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                overlayColor: MaterialStateProperty.all(Colors.transparent),
                 onTap: () {},
                 onHover: (value) {
                   print(value);
@@ -109,6 +135,19 @@ class ContactPage extends StatelessWidget {
                       height: 170,
                       width: 200,
                       decoration: BoxDecoration(
+                        color: Colors.grey[100],
+                        // borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: controller.getEmailHover
+                                ? Colors.green
+                                : Colors.transparent,
+                            spreadRadius: 0.3,
+                            blurRadius: 5,
+                            offset: Offset(0, 0),
+                            // changes position of shadow
+                          ),
+                        ],
                         border: Border(
                             bottom: BorderSide(
                           //                   <--- left side
@@ -132,7 +171,7 @@ class ContactPage extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 10,
+            height: 60,
           )
           // Text(
           //   "Contato",

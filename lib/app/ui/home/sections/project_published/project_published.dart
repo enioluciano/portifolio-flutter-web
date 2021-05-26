@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/home/home_controller.dart';
+import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 class ProjectPublishedPage extends StatelessWidget {
   final controller = Get.find<HomeController>();
@@ -12,10 +13,32 @@ class ProjectPublishedPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Apps publicados ",
-            style: TextStyle(
-                fontSize: 80, color: Colors.grey, fontWeight: FontWeight.bold),
+          Row(
+            children: [
+              Expanded(
+                child: Divider(height: 3, thickness: 3, color: colorB),
+              ),
+              Expanded(
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Apps publicados",
+                      style: TextStyle(
+                        fontSize: 45,
+                        color: corSection,
+                        fontWeight: FontWeight.bold,
+                        // decoration: TextDecoration.underline
+                      ),
+                    )),
+              ),
+              Expanded(
+                child: Divider(
+                  height: 3,
+                  thickness: 3,
+                  color: colorB,
+                ),
+              ),
+            ],
           ),
           SizedBox(
             height: 80,
@@ -153,7 +176,7 @@ class ProjectPublishedPage extends StatelessWidget {
                               width: 3.0,
                             )),
                           ),
-                          child: Text("Download App"),
+                          child: Text("Aguardando aprovação"),
                         )),
                   ),
                 ],

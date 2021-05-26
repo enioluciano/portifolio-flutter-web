@@ -4,6 +4,40 @@ import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeController extends GetxController {
+  //**
+  //   BEGIN APPBAR
+  //
+  // */
+
+  RxBool aboutMeHover = false.obs;
+  bool get getAboutMeHover => aboutMeHover.value;
+  bool setAboutMeHover() => aboutMeHover.value = !aboutMeHover.value;
+
+  RxBool homeHover = false.obs;
+  bool get getHomeHover => homeHover.value;
+  bool setHomeHover() => homeHover.value = !homeHover.value;
+
+  RxBool skillHover = false.obs;
+  bool get getSkillHover => skillHover.value;
+  bool setSkillHover() => skillHover.value = !skillHover.value;
+
+  RxBool expHover = false.obs;
+  bool get getExpHover => expHover.value;
+  bool setExpHover() => expHover.value = !expHover.value;
+
+  RxBool repositoryHover = false.obs;
+  bool get getRepositoryHover => repositoryHover.value;
+  bool setRepositoryHover() => repositoryHover.value = !repositoryHover.value;
+
+  RxBool contactHover = false.obs;
+  bool get getContactHover => contactHover.value;
+  bool setContactHover() => contactHover.value = !contactHover.value;
+
+  //**
+  //  FINISH APPBAR
+  //
+  // */
+
   RxBool localHover = false.obs;
   bool get getLocalHover => localHover.value;
   bool setLocalHover() => localHover.value = !localHover.value;
@@ -44,6 +78,8 @@ class HomeController extends GetxController {
   RxBool blogHover = false.obs;
   bool get getBlogHover => blogHover.value;
   bool setBlogHover() => blogHover.value = !blogHover.value;
+
+  Rx<Color> color = Colors.transparent.obs;
 
   // RxBool mobianceHover = false.obs;
   // bool get getMobianceHover => mobianceHover.value;
