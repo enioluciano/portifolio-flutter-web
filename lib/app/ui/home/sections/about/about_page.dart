@@ -43,15 +43,6 @@ class AboutPage extends StatelessWidget {
         ),
         Row(
           children: [
-            Expanded(
-              flex: 1,
-              child: CircleAvatar(
-                radius: 110,
-                backgroundImage: AssetImage(
-                  "/images/enio.JPG",
-                ),
-              ),
-            ),
             SizedBox(
               width: 20,
             ),
@@ -60,12 +51,11 @@ class AboutPage extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    "Olá, meu nome é Ênio,  moro em Parnaíba - Piauí. Comecei na programação em 2019 como desenvolvedor mobile em Flutter,"
-                    "depois trabalhei com alguns frameworks, como Node JS, Vue JS e React Js."
-                    "E hoje já trabalho com flutter e estou aqui ate o momento. \n\n"
-                    "Continua gostando de desafio e ideias inovadoras, atualmente divide seu tempo entre consultoria, construção de negócios, programação e um café bem forte."
-                    "Com muita motivação, gerencia um blog em que busca passar o maior número de conhecimentos possíveis para outros profissionais da área de tecnologia e apresenta um pouco de sua rotina profissional no seu perfil do Instagram com o objetivo de compartilhar ensinamentos e experiências a profissionais."
-                    "Gosto de todos os assuntos que envolvem tecnologia, e amo programar.",
+                    "Formado em Ciência da Computação pela Estácio de Sá.\n\n"
+                    "Mestre em Ciência da Computação pela Universidade Federal Piauí.\n\n"
+                    "Sou desenvolvedor mobile e professor universitário."
+                    "Sou apaixonado pelo mundo digital e procuro estar sempre atualizado com as novas tecnologias."
+                    "\n\nFiquem a vontade para conhecer um pouco da minha trajetória profissional.",
                     style: TextStyle(fontSize: 18),
                   ),
                   SizedBox(
@@ -146,6 +136,12 @@ class AboutPage extends StatelessWidget {
                         children: [
                           Icon(Icons.arrow_right, color: colorB),
                           Text("API RestFull"),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.arrow_right, color: colorB),
+                          Text("MySql"),
                         ],
                       ),
                     ],
