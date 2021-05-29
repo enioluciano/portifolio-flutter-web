@@ -79,6 +79,10 @@ class HomeController extends GetxController {
   bool get getBlogHover => blogHover.value;
   bool setBlogHover() => blogHover.value = !blogHover.value;
 
+  RxBool portifolioHover = false.obs;
+  bool get getPortifolioHover => portifolioHover.value;
+  bool setPortifolioHover() => portifolioHover.value = !portifolioHover.value;
+
   Rx<Color> color = Colors.transparent.obs;
 
   // RxBool mobianceHover = false.obs;
@@ -99,10 +103,29 @@ class HomeController extends GetxController {
   //
   // */
 
+  void urlLaunchGitHub() async =>
+      await canLaunch("https://github.com/enioluciano")
+          ? await launch("https://github.com/enioluciano")
+          : throw 'Could not launch https://github.com/enioluciano';
+
+  void urlLaunchInstagram() async =>
+      await canLaunch("https://www.instagram.com/enio.luciano/")
+          ? await launch("https://www.instagram.com/enio.luciano/")
+          : throw 'Could not launch https://www.instagram.com/enio.luciano/';
+  void urlLaunchLinkendIn() async =>
+      await canLaunch("https://www.linkedin.com/in/enio-barbosa/")
+          ? await launch("https://www.linkedin.com/in/enio-barbosa/")
+          : throw 'Could not launch https://www.linkedin.com/in/enio-barbosa/';
+
   void urlLaunchTodoGetX() async =>
       await canLaunch("https://github.com/enioluciano/todoGetX")
           ? await launch("https://github.com/enioluciano/todoGetX")
           : throw 'Could not launch https://github.com/enioluciano/todoGetX';
+
+  void urlLaunchPortifolioWeB() async => await canLaunch(
+          "https://github.com/enioluciano/portifolio-flutter-web")
+      ? await launch("https://github.com/enioluciano/portifolio-flutter-web")
+      : throw 'Could not launch  https://github.com/enioluciano/portifolio-flutter-web';
 
   void urlLaunchDesignaJw() async => await canLaunch(
           "https://play.google.com/store/apps/details?id=br.com.designajw.designa_jw")
@@ -126,10 +149,10 @@ class HomeController extends GetxController {
     Column(
       children: [
         FlutterLogo(
-          size: 80,
+          size: 60,
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text("Flutter"),
       ],
@@ -141,7 +164,7 @@ class HomeController extends GetxController {
           size: 60,
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text("Versionamento Git"),
       ],
@@ -153,7 +176,7 @@ class HomeController extends GetxController {
           size: 60,
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text("Google Play"),
       ],
@@ -165,48 +188,52 @@ class HomeController extends GetxController {
           size: 60,
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text("Apple Store"),
       ],
     ),
     Column(
       children: [
-        FlutterLogo(
-          size: 80,
+        Icon(
+          FontAwesomeIcons.code,
+          size: 60,
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text("Typescript"),
       ],
     ),
     Column(
       children: [
-        FlutterLogo(
-          size: 80,
+        Icon(
+          FontAwesomeIcons.nodeJs,
+          size: 60,
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text("Node Js"),
       ],
     ),
     Column(
       children: [
-        FlutterLogo(
-          size: 80,
+        Icon(
+          Icons.free_breakfast,
+          size: 60,
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text("GetX"),
       ],
     ),
     Column(
       children: [
-        FlutterLogo(
-          size: 80,
+        Icon(
+          Icons.free_breakfast_outlined,
+          size: 60,
         ),
         SizedBox(
           height: 10,

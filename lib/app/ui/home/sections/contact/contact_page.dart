@@ -120,9 +120,6 @@ class ContactPage extends StatelessWidget {
                 width: 45,
               ),
               InkWell(
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                overlayColor: MaterialStateProperty.all(Colors.transparent),
                 onTap: () {},
                 onHover: (value) {
                   print(value);
@@ -135,19 +132,8 @@ class ContactPage extends StatelessWidget {
                       height: 170,
                       width: 200,
                       decoration: BoxDecoration(
-                        color: Colors.grey[100],
                         // borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: controller.getEmailHover
-                                ? Colors.green
-                                : Colors.transparent,
-                            spreadRadius: 0.3,
-                            blurRadius: 5,
-                            offset: Offset(0, 0),
-                            // changes position of shadow
-                          ),
-                        ],
+
                         border: Border(
                             bottom: BorderSide(
                           //                   <--- left side

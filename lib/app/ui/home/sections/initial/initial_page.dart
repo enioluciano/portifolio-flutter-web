@@ -4,7 +4,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
+import '../../home_controller.dart';
+
 class InitialPage extends StatelessWidget {
+  final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +28,7 @@ class InitialPage extends StatelessWidget {
                     "images/perfil.JPG",
                     filterQuality: FilterQuality.high,
                     fit: BoxFit.fill,
-                    height: 700,
+                    height: Get.height * 0.7,
                     width: 600,
                   ),
                 ),
@@ -84,7 +87,9 @@ class InitialPage extends StatelessWidget {
                         Text(
                           "Desenvolvedor de aplicativos móveis",
                           style: TextStyle(
-                              fontWeight: FontWeight.w400, fontSize: 20),
+                              fontFamily: "Roboto-light",
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20),
                         ),
                       ],
                     ),
@@ -101,7 +106,9 @@ class InitialPage extends StatelessWidget {
                         Text(
                           "Professor Universitário",
                           style: TextStyle(
-                              fontWeight: FontWeight.w400, fontSize: 20),
+                              fontFamily: "Roboto-light",
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20),
                         ),
                       ],
                     ),
@@ -118,7 +125,9 @@ class InitialPage extends StatelessWidget {
                         Text(
                           "Freelancer",
                           style: TextStyle(
-                              fontWeight: FontWeight.w400, fontSize: 20),
+                              fontFamily: "Roboto-light",
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20),
                         ),
                       ],
                     ),
@@ -135,40 +144,83 @@ class InitialPage extends StatelessWidget {
                         Text(
                           "Parnaíba - PI",
                           style: TextStyle(
-                              fontWeight: FontWeight.w400, fontSize: 20),
+                              fontFamily: "Roboto-light",
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20),
                         ),
                       ],
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 70,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              FontAwesomeIcons.github,
-                              color: Colors.black,
-                            ),
-                            label: Text("Github")),
-                        SizedBox(
-                          width: 25,
+                        InkWell(
+                          overlayColor:
+                              MaterialStateProperty.all(Colors.transparent),
+                          onTap: () => controller.urlLaunchGitHub(),
+                          child: Icon(
+                            FontAwesomeIcons.github,
+                            color: Colors.black,
+                          ),
                         ),
-                        TextButton.icon(
-                            onPressed: () {},
-                            icon: Icon(FontAwesomeIcons.linkedin),
-                            label: Text("Linkendin")),
+                        // TextButton.icon(
+                        //     onPressed: () => controller.urlLaunchGitHub(),
+                        //     style: ButtonStyle(
+                        //         overlayColor: MaterialStateProperty.all(
+                        //             Colors.transparent)),
+                        //     icon: Icon(
+                        //       FontAwesomeIcons.github,
+                        //       color: Colors.black,
+                        //     ),
+                        //     label: Text("Github")),
                         SizedBox(
-                          width: 25,
+                          width: 40,
                         ),
-                        TextButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              FontAwesomeIcons.instagram,
-                              color: Colors.grey,
-                            ),
-                            label: Text("Instagram")),
+                        InkWell(
+                          overlayColor:
+                              MaterialStateProperty.all(Colors.transparent),
+                          onTap: () => controller.urlLaunchLinkendIn(),
+                          child: Icon(
+                            FontAwesomeIcons.linkedin,
+                          ),
+                        ),
+                        // TextButton.icon(
+                        //     onPressed: () => controller.urlLaunchLinkendIn(),
+                        //     style: ButtonStyle(
+                        //         overlayColor: MaterialStateProperty.all(
+                        //             Colors.transparent)),
+                        //     icon: Icon(FontAwesomeIcons.linkedin),
+                        //     label: Text(
+                        //       "Linkendin",
+                        //       style: TextStyle(color: Colors.grey),
+                        //     )),
+                        SizedBox(
+                          width: 40,
+                        ),
+                        InkWell(
+                          overlayColor:
+                              MaterialStateProperty.all(Colors.transparent),
+                          onTap: () => controller.urlLaunchInstagram(),
+                          child: Icon(
+                            FontAwesomeIcons.instagram,
+                            color: Colors.black,
+                          ),
+                        )
+                        // TextButton.icon(
+                        //     style: ButtonStyle(
+                        //         overlayColor: MaterialStateProperty.all(
+                        //             Colors.transparent)),
+                        //     onPressed: () => controller.urlLaunchInstagram(),
+                        //     icon: Icon(
+                        //       FontAwesomeIcons.instagram,
+                        //       color: Colors.black,
+                        //     ),
+                        //     label: Text(
+                        //       "Instagram",
+                        //       style: TextStyle(color: colorB),
+                        //     )),
                       ],
                     ),
 

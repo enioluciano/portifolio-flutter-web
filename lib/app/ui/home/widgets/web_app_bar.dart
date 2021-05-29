@@ -76,9 +76,9 @@ class WebAppBar extends StatelessWidget {
                   Obx(() => ItemCustomize(
                         text: "Home",
                         textStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color:
-                                controller.getHomeHover ? Colors.blue : colorIn,
+                            color: controller.getHomeHover
+                                ? Colors.blue
+                                : Colors.grey[600],
                             fontSize: 14),
                         visible: controller.getHomeHover,
                         backgroundColor: Colors.blue,
@@ -105,10 +105,9 @@ class WebAppBar extends StatelessWidget {
                   Obx(() => ItemCustomize(
                         text: "Sobre mim",
                         textStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
                             color: controller.getAboutMeHover
-                                ? Colors.blue
-                                : colorIn,
+                                ? colorB
+                                : Colors.grey[700],
                             fontSize: 14),
                         visible: controller.getAboutMeHover,
                         backgroundColor: Colors.blue,
@@ -135,10 +134,9 @@ class WebAppBar extends StatelessWidget {
                   Obx(() => ItemCustomize(
                         text: "Habilidades",
                         textStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
                             color: controller.getSkillHover
-                                ? Colors.blue
-                                : colorIn,
+                                ? colorB
+                                : Colors.grey[700],
                             fontSize: 14),
                         visible: controller.getSkillHover,
                         backgroundColor: Colors.blue,
@@ -167,10 +165,9 @@ class WebAppBar extends StatelessWidget {
                   Obx(() => ItemCustomize(
                         text: "Repositórios",
                         textStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
                             color: controller.getRepositoryHover
-                                ? Colors.blue
-                                : colorIn,
+                                ? colorB
+                                : Colors.grey[700],
                             fontSize: 14),
                         visible: controller.getRepositoryHover,
                         backgroundColor: Colors.blue,
@@ -187,9 +184,9 @@ class WebAppBar extends StatelessWidget {
                   Obx(() => ItemCustomize(
                         text: "Experiência",
                         textStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color:
-                                controller.getExpHover ? Colors.blue : colorIn,
+                            color: controller.getExpHover
+                                ? colorB
+                                : Colors.grey[700],
                             fontSize: 14),
                         visible: controller.getExpHover,
                         backgroundColor: Colors.blue,
@@ -221,13 +218,12 @@ class WebAppBar extends StatelessWidget {
                   Obx(() => ItemCustomize(
                         text: "Contato",
                         textStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
                             color: controller.getContactHover
-                                ? Colors.blue
-                                : colorIn,
+                                ? colorB
+                                : Colors.grey[700],
                             fontSize: 14),
                         visible: controller.getContactHover,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: colorB,
                         onHover: (value) => controller.setContactHover(),
                         onTap: () {
                           Scrollable.ensureVisible(

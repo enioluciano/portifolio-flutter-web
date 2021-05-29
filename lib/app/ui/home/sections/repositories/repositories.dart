@@ -267,8 +267,8 @@ class RepositoriesPages extends StatelessWidget {
                     width: 30,
                   ),
                   InkWell(
-                    onHover: (value) => controller.setLocalHover(),
-                    onTap: () => controller.urlLaunchTodoGetX(),
+                    onHover: (value) => controller.setPortifolioHover(),
+                    onTap: () => controller.urlLaunchPortifolioWeB(),
                     child: Obx(
                       () => Card(
                         elevation: 3,
@@ -283,7 +283,7 @@ class RepositoriesPages extends StatelessWidget {
                                 bottom: BorderSide(
                               //                   <--- left side
                               // color: Colors.blue,
-                              color: controller.getLocalHover
+                              color: controller.getPortifolioHover
                                   ? Colors.green
                                   : Colors.blue,
                               width: 3.0,
@@ -297,7 +297,7 @@ class RepositoriesPages extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Text(
-                                  "app_toDo",
+                                  "portifólio-flutter-web",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: colorB),
@@ -306,7 +306,7 @@ class RepositoriesPages extends StatelessWidget {
                                   height: 10,
                                 ),
                                 Text(
-                                  "App voltado para as tarefas",
+                                  "Meu portifólio feito em web",
                                   style: TextStyle(
                                       color: Colors.grey, fontSize: 14),
                                 ),

@@ -50,32 +50,98 @@ class AboutPage extends StatelessWidget {
               flex: 2,
               child: Column(
                 children: [
-                  Text(
-                    "Formado em Ciência da Computação pela Estácio de Sá.\n\n"
-                    "Mestre em Ciência da Computação pela Universidade Federal Piauí.\n\n"
-                    "Sou desenvolvedor mobile e professor universitário."
-                    "Sou apaixonado pelo mundo digital e procuro estar sempre atualizado com as novas tecnologias."
-                    "\n\nFiquem a vontade para conhecer um pouco da minha trajetória profissional.",
-                    style: TextStyle(fontSize: 18),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.school_rounded,
+                        color: Colors.green,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Bacharel em Ciência da Computação - Estácio de Sá.",
+                        style: TextStyle(fontSize: 16),
+                      )
+                    ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 30,
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.school_rounded,
+                        color: Colors.green,
+                        // size: 18,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Mestre em Ciência da Computação - Universidade Federal Piauí.",
+                        style: TextStyle(fontSize: 16),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.brightness_1,
+                        color: Colors.red,
+                        size: 20,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "Sou desenvolvedor mobile e professor universitário."
+                          " Sou apaixonado pelo mundo digital e procuro estar sempre atualizado com as novas tecnologias. ",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Fiquem a vontade para conhecer um pouco da minha trajetória profissional!",
+                        style: TextStyle(fontSize: 16, color: colorIn),
+                      ),
+                      Icon(
+                        Icons.tag_faces_rounded,
+                        color: colorIn,
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
                   ),
                   Divider(
                     thickness: 2,
                   ),
                   SizedBox(
-                    height: 15,
+                    height: 30,
                   ),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         "Linguagens e Tecnologias que ja trabalhei",
                         style: TextStyle(
-                            fontWeight: FontWeight.w700, color: colorB),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: colorB),
                       )),
                   SizedBox(
-                    height: 15,
+                    height: 30,
                   ),
                   Row(
                     children: [
@@ -147,7 +213,7 @@ class AboutPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
                   Divider(
                     thickness: 2,
@@ -155,42 +221,13 @@ class AboutPage extends StatelessWidget {
                   SizedBox(
                     height: 40,
                   ),
-                  Row(
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            FontAwesomeIcons.github,
-                            color: Colors.black,
-                          ),
-                          label: Text("Github")),
-                      SizedBox(
-                        width: 25,
-                      ),
-                      TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(FontAwesomeIcons.linkedin),
-                          label: Text("Linkendin")),
-                      SizedBox(
-                        width: 25,
-                      ),
-                      TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            FontAwesomeIcons.instagram,
-                            color: Colors.grey,
-                          ),
-                          label: Text("Instagram")),
-                    ],
-                  ),
                 ],
               ),
             )
           ],
         ),
         SizedBox(
-          height: 120,
+          height: 70,
         )
       ],
     );
