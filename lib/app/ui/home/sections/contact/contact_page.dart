@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/home/home_controller.dart';
+import 'package:portifolio_flutter_web/app/ui/home/sections/contact/contact_page_mobile.dart';
+import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 class ContactPage extends StatelessWidget {
@@ -26,7 +28,9 @@ class ContactPage extends StatelessWidget {
                     child: Text(
                       "Contato",
                       style: TextStyle(
-                        fontSize: 45,
+                        fontSize: controller.getMaxWidth <= mobileBreakpoint
+                            ? 22
+                            : 45,
                         color: corSection,
                         fontWeight: FontWeight.bold,
                         // decoration: TextDecoration.underline
@@ -45,117 +49,119 @@ class ContactPage extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  controller.setLocalHover();
-                  print(value);
-                  // setState(() {
-                  //   isHovered = value;
-                  // });
-                },
-                child: Obx(() => Container(
-                      height: 170,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                          //                   <--- left side
-                          // color: Colors.blue,
-                          color: controller.getLocalHover
-                              ? Colors.green
-                              : Colors.blue,
-                          width: 3.0,
-                        )),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.location_on, size: 70),
-                          Text("Parnaíba - PI"),
-                        ],
-                      ),
-                    )),
-              ),
-              SizedBox(
-                width: 45,
-              ),
-              InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  print(value);
-                  controller.setPhoneHover();
-                  // setState(() {
-                  //   isHovered = value;
-                  // });
-                },
-                child: Obx(() => Container(
-                      height: 170,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                          //                   <--- left side
+          controller.getMaxWidth <= mobileBreakpoint
+              ? ContactPageMobile()
+              : Wrap(
+                  alignment: WrapAlignment.spaceEvenly,
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      onHover: (value) {
+                        controller.setLocalHover();
+                        print(value);
+                        // setState(() {
+                        //   isHovered = value;
+                        // });
+                      },
+                      child: Obx(() => Container(
+                            height: 170,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              border: Border(
+                                  bottom: BorderSide(
+                                //                   <--- left side
+                                // color: Colors.blue,
+                                color: controller.getLocalHover
+                                    ? Colors.green
+                                    : Colors.blue,
+                                width: 3.0,
+                              )),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.location_on, size: 70),
+                                Text("Parnaíba - PI"),
+                              ],
+                            ),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 45,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      onHover: (value) {
+                        print(value);
+                        controller.setPhoneHover();
+                        // setState(() {
+                        //   isHovered = value;
+                        // });
+                      },
+                      child: Obx(() => Container(
+                            height: 170,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              border: Border(
+                                  bottom: BorderSide(
+                                //                   <--- left side
 
-                          color: controller.getPhoneHover
-                              ? Colors.green
-                              : Colors.blue,
-                          width: 3.0,
-                        )),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.phone, size: 70),
-                          Text("(86) 9 9452-8588"),
-                        ],
-                      ),
-                    )),
-              ),
-              SizedBox(
-                width: 45,
-              ),
-              InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  print(value);
-                  controller.setEmailHover();
-                  // setState(() {
-                  //   isHovered = value;
-                  // });
-                },
-                child: Obx(() => Container(
-                      height: 170,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(10),
+                                color: controller.getPhoneHover
+                                    ? Colors.green
+                                    : Colors.blue,
+                                width: 3.0,
+                              )),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.phone, size: 70),
+                                Text("(86) 9 9452-8588"),
+                              ],
+                            ),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 45,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      onHover: (value) {
+                        print(value);
+                        controller.setEmailHover();
+                        // setState(() {
+                        //   isHovered = value;
+                        // });
+                      },
+                      child: Obx(() => Container(
+                            height: 170,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              // borderRadius: BorderRadius.circular(10),
 
-                        border: Border(
-                            bottom: BorderSide(
-                          //                   <--- left side
+                              border: Border(
+                                  bottom: BorderSide(
+                                //                   <--- left side
 
-                          color: controller.getEmailHover
-                              ? Colors.green
-                              : Colors.blue,
-                          width: 3.0,
-                        )),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.email, size: 70),
-                          Text("eniolucianoo@gmail.com"),
-                        ],
-                      ),
-                    )),
-              ),
-            ],
-          ),
+                                color: controller.getEmailHover
+                                    ? Colors.green
+                                    : Colors.blue,
+                                width: 3.0,
+                              )),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.email, size: 70),
+                                Text("eniolucianoo@gmail.com"),
+                              ],
+                            ),
+                          )),
+                    ),
+                  ],
+                ),
           SizedBox(
             height: 60,
           )

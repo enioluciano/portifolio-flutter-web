@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/home/home_controller.dart';
+import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 class RepositoriesPages extends StatelessWidget {
@@ -27,7 +28,9 @@ class RepositoriesPages extends StatelessWidget {
                     child: Text(
                       "Repositórios",
                       style: TextStyle(
-                        fontSize: 45,
+                        fontSize: controller.getMaxWidth <= mobileBreakpoint
+                            ? 22
+                            : 45,
                         color: corSection,
                         fontWeight: FontWeight.bold,
                         // decoration: TextDecoration.underline
@@ -161,7 +164,7 @@ class RepositoriesPages extends StatelessWidget {
                                   height: 10,
                                 ),
                                 Text(
-                                  "App voltado para listar tarefas pendentes e realizadas",
+                                  "App voltado para listar tarefas",
                                   style: TextStyle(
                                       color: Colors.grey, fontSize: 14),
                                 ),
@@ -306,7 +309,7 @@ class RepositoriesPages extends StatelessWidget {
                                   height: 10,
                                 ),
                                 Text(
-                                  "Meu portifólio feito em web",
+                                  "Meu Portifólio",
                                   style: TextStyle(
                                       color: Colors.grey, fontSize: 14),
                                 ),

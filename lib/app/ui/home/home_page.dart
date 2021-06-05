@@ -37,19 +37,29 @@ class HomePage extends GetView<HomeController> {
                 key: JosKey.keyHome,
                 children: [
                   ConstrainedBox(
-                    constraints: BoxConstraints(maxWidth: 1200),
-                    child: Column(
-                      children: [
-                        InitialPage(),
-                        AboutPage(),
-                        SkillPage(),
-                        RepositoriesPages(),
-                        ProjectPublishedPage(),
-                        ExperiencePage(),
-                        ContactPage()
-                      ],
-                    ),
-                  ),
+                      constraints: BoxConstraints(maxWidth: 1200),
+                      child: LayoutBuilder(
+                        builder: (context, constraints) {
+                          controller.maxWidth.value = constraints.maxWidth;
+                          print("*******");
+                          print(controller.getMaxWidth);
+                          print("*******");
+                          return Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 16),
+                            child: Column(
+                              children: [
+                                InitialPage(),
+                                AboutPage(),
+                                SkillPage(),
+                                RepositoriesPages(),
+                                ProjectPublishedPage(),
+                                ExperiencePage(),
+                                ContactPage()
+                              ],
+                            ),
+                          );
+                        },
+                      )),
                   FooterPage()
                 ],
               ),

@@ -2,12 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
+import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:timelines/timelines.dart';
 
+import '../../home_controller.dart';
+
 class AboutPage extends StatelessWidget {
+  final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
+    Widget buildHorizontalAdvantege(String title) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.arrow_right, color: colorB),
+          Text(
+            title,
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+        ],
+      );
+    }
+
     return Column(
       key: JosKey.keyAbout,
       children: [
@@ -22,7 +41,8 @@ class AboutPage extends StatelessWidget {
                   child: Text(
                     "Sobre mim",
                     style: TextStyle(
-                      fontSize: 45,
+                      fontSize:
+                          controller.getMaxWidth <= mobileBreakpoint ? 22 : 45,
                       color: corSection,
                       fontWeight: FontWeight.bold,
                       // decoration: TextDecoration.underline
@@ -59,9 +79,11 @@ class AboutPage extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Text(
-                        "Bacharel em Ciência da Computação - Estácio de Sá.",
-                        style: TextStyle(fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          "Bacharel em Ciência da Computação - Estácio de Sá.",
+                          style: TextStyle(fontSize: 16),
+                        ),
                       )
                     ],
                   ),
@@ -78,9 +100,11 @@ class AboutPage extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Text(
-                        "Mestre em Ciência da Computação - Universidade Federal Piauí.",
-                        style: TextStyle(fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          "Mestre em Ciência da Computação - Universidade Federal Piauí.",
+                          style: TextStyle(fontSize: 16),
+                        ),
                       )
                     ],
                   ),
@@ -109,19 +133,22 @@ class AboutPage extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Fiquem a vontade para conhecer um pouco da minha trajetória profissional!",
-                        style: TextStyle(fontSize: 16, color: colorIn),
-                      ),
-                      Icon(
-                        Icons.tag_faces_rounded,
-                        color: colorIn,
-                      )
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     Expanded(
+                  //       child: Text(
+                  //         "Fiquem a vontade para conhecer um pouco da minha trajetória profissional!",
+                  //         style: TextStyle(fontSize: 16, color: colorIn),
+                  //       ),
+                  //     ),
+                  //     Icon(
+                  //       Icons.tag_faces_rounded,
+                  //       color: colorIn,
+                  //     )
+                  //   ],
+                  // ),
                   SizedBox(
                     height: 30,
                   ),
@@ -143,74 +170,21 @@ class AboutPage extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  Row(
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text(
-                            "Flutter",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("Dart"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("NodeJS"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("Laravel"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("Firebase"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("Cloud Functions"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("TypeScript"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("JavaScript"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("API RestFull"),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_right, color: colorB),
-                          Text("MySql"),
-                        ],
-                      ),
-                    ],
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Wrap(
+                      children: [
+                        buildHorizontalAdvantege("Flutter"),
+                        buildHorizontalAdvantege("Dart"),
+                        buildHorizontalAdvantege("Node Js"),
+                        buildHorizontalAdvantege("Laravel"),
+                        buildHorizontalAdvantege("Firebase"),
+                        buildHorizontalAdvantege("Cloud Functions"),
+                        buildHorizontalAdvantege("TypeScript"),
+                        buildHorizontalAdvantege("JavaScript"),
+                        buildHorizontalAdvantege("ApiRestFull"),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 30,

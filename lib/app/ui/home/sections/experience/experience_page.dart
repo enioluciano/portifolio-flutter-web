@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:portifolio_flutter_web/app/models/key.dart';
+import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:timelines/timelines.dart';
+
+import '../../home_controller.dart';
 
 class ExperiencePage extends StatelessWidget {
   List<Widget> list = [
@@ -34,8 +38,11 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text(
-                "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter"),
+            Expanded(
+              child: Text(
+                "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter",
+              ),
+            ),
           ],
         ),
         SizedBox(
@@ -44,7 +51,8 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text("Refatoração e Implementação de novas features"),
+            Expanded(
+                child: Text("Refatoração e Implementação de novas features")),
           ],
         ),
         SizedBox(
@@ -53,7 +61,7 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text("Integração de APIs Rest"),
+            Expanded(child: Text("Integração de APIs Rest")),
           ],
         ),
         SizedBox(
@@ -80,7 +88,7 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Maio 2021 - Atual",
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(color: Colors.grey, fontSize: 13),
             ),
           ],
         )
@@ -114,8 +122,10 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text(
-                "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter"),
+            Expanded(
+              child: Text(
+                  "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter"),
+            ),
           ],
         ),
         SizedBox(
@@ -124,7 +134,8 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text("Refatoração e Implementação de novas features"),
+            Expanded(
+                child: Text("Refatoração e Implementação de novas features")),
           ],
         ),
         SizedBox(
@@ -133,7 +144,7 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text("Integração de APIs Rest"),
+            Expanded(child: Text("Integração de APIs Rest")),
           ],
         ),
         SizedBox(
@@ -151,7 +162,7 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Fev. 2021 - Maio 2021",
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(color: Colors.grey, fontSize: 13),
             ),
           ],
         )
@@ -185,8 +196,10 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text(
-                "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter"),
+            Expanded(
+              child: Text(
+                  "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter"),
+            ),
           ],
         ),
         SizedBox(
@@ -195,7 +208,7 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text("Integração com Firebase"),
+            Expanded(child: Text("Integração com Firebase")),
           ],
         ),
         SizedBox(
@@ -204,7 +217,7 @@ class ExperiencePage extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text("Integração de APIs Rest"),
+            Expanded(child: Text("Integração de APIs Rest")),
           ],
         ),
         SizedBox(
@@ -222,7 +235,7 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Abril 2020 - Atual",
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(color: Colors.grey, fontSize: 13),
             ),
           ],
         )
@@ -231,6 +244,7 @@ class ExperiencePage extends StatelessWidget {
   ];
 
   var x = {"janeiro": "Testando", "fevereiro": "Testando"};
+  final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -249,7 +263,9 @@ class ExperiencePage extends StatelessWidget {
                       child: Text(
                         "Experiência",
                         style: TextStyle(
-                          fontSize: 45,
+                          fontSize: controller.getMaxWidth <= mobileBreakpoint
+                              ? 22
+                              : 45,
                           color: corSection,
                           fontWeight: FontWeight.bold,
                           // decoration: TextDecoration.underline

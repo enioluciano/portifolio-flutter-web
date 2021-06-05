@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeController extends GetxController {
+  RxDouble maxWidth = 0.0.obs;
+  double get getMaxWidth => maxWidth.value;
   //**
   //   BEGIN APPBAR
   //

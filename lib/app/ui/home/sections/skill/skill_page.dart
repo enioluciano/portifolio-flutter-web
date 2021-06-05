@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/home/home_controller.dart';
+import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 class SkillPage extends StatelessWidget {
@@ -23,7 +24,9 @@ class SkillPage extends StatelessWidget {
                     child: Text(
                       "Habilidades",
                       style: TextStyle(
-                        fontSize: 45,
+                        fontSize: controller.getMaxWidth <= mobileBreakpoint
+                            ? 22
+                            : 45,
                         color: corSection,
                         fontWeight: FontWeight.bold,
                         // decoration: TextDecoration.underline
