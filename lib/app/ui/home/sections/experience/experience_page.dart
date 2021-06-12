@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -29,7 +30,7 @@ class ExperiencePage extends StatelessWidget {
             SizedBox(
               width: 4,
             ),
-            Text("Desenvolvedor mobile"),
+            Expanded(child: Text("Desenvolvedor mobile")),
           ],
         ),
         SizedBox(
@@ -80,7 +81,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work,
-              size: 18,
+              size: Get.width <= mobileBreakpoint ? 14 : 18,
               color: Colors.green,
             ),
             SizedBox(
@@ -88,7 +89,9 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Maio 2021 - Atual",
-              style: TextStyle(color: Colors.grey, fontSize: 13),
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
             ),
           ],
         )
@@ -113,7 +116,7 @@ class ExperiencePage extends StatelessWidget {
             SizedBox(
               width: 4,
             ),
-            Text("Desenvolvedor mobile"),
+            Expanded(child: Text("Desenvolvedor mobile")),
           ],
         ),
         SizedBox(
@@ -154,7 +157,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work_off_outlined,
-              size: 18,
+              size: Get.width <= mobileBreakpoint ? 14 : 18,
               color: Colors.red,
             ),
             SizedBox(
@@ -162,7 +165,9 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Fev. 2021 - Maio 2021",
-              style: TextStyle(color: Colors.grey, fontSize: 13),
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
             ),
           ],
         )
@@ -187,7 +192,7 @@ class ExperiencePage extends StatelessWidget {
             SizedBox(
               width: 4,
             ),
-            Text("Desenvolvedor mobile"),
+            Expanded(child: Text("Desenvolvedor mobile")),
           ],
         ),
         SizedBox(
@@ -227,7 +232,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work,
-              size: 18,
+              size: Get.width <= mobileBreakpoint ? 14 : 18,
               color: Colors.green,
             ),
             SizedBox(
@@ -235,7 +240,9 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Abril 2020 - Atual",
-              style: TextStyle(color: Colors.grey, fontSize: 13),
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
             ),
           ],
         )
@@ -255,9 +262,10 @@ class ExperiencePage extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Divider(height: 3, thickness: 3, color: colorB),
+                  child: Divider(height: 3, thickness: 2, color: colorB),
                 ),
                 Expanded(
+                  flex: 2,
                   child: Align(
                       alignment: Alignment.center,
                       child: Text(
@@ -275,7 +283,7 @@ class ExperiencePage extends StatelessWidget {
                 Expanded(
                   child: Divider(
                     height: 3,
-                    thickness: 3,
+                    thickness: 2,
                     color: colorB,
                   ),
                 ),

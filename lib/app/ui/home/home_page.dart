@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,22 @@ class HomePage extends GetView<HomeController> {
                             padding: EdgeInsets.symmetric(horizontal: 16),
                             child: Column(
                               children: [
+                                // SizedBox(
+                                //   height: 40,
+                                //   child: AutoSizeText(
+                                //     "Criação de Apps Android e IOS com flutter - Crie 16 Apps ",
+                                //     style: TextStyle(
+                                //         fontSize: 120,
+                                //         color: Colors.black,
+                                //         fontWeight: FontWeight.bold),
+                                //   ),
+                                // ),
+                                // Text('dev_mobile'.tr),
+                                // TextButton(
+                                //     onPressed: () {
+                                //       Get.updateLocale(Locale('en', 'US'));
+                                //     },
+                                //     child: Text("Trocar")),
                                 InitialPage(),
                                 AboutPage(),
                                 SkillPage(),

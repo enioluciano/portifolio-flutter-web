@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
+import 'package:portifolio_flutter_web/app/ui/home/sections/about/about_page_mobile.dart';
 import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:timelines/timelines.dart';
@@ -30,34 +31,37 @@ class AboutPage extends StatelessWidget {
     return Column(
       key: JosKey.keyAbout,
       children: [
-        Row(
-          children: [
-            Expanded(
-              child: Divider(height: 3, thickness: 3, color: colorB),
-            ),
-            Expanded(
-              child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Sobre mim",
-                    style: TextStyle(
-                      fontSize:
-                          controller.getMaxWidth <= mobileBreakpoint ? 22 : 45,
-                      color: corSection,
-                      fontWeight: FontWeight.bold,
-                      // decoration: TextDecoration.underline
+        Get.width <= mobileBreakpoint
+            ? AboutPageMobile()
+            : Row(
+                children: [
+                  Expanded(
+                    child: Divider(height: 3, thickness: 3, color: colorB),
+                  ),
+                  Expanded(
+                    child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Sobre mim",
+                          style: TextStyle(
+                            fontSize: controller.getMaxWidth <= mobileBreakpoint
+                                ? 22
+                                : 45,
+                            color: corSection,
+                            fontWeight: FontWeight.bold,
+                            // decoration: TextDecoration.underline
+                          ),
+                        )),
+                  ),
+                  Expanded(
+                    child: Divider(
+                      height: 3,
+                      thickness: 3,
+                      color: colorB,
                     ),
-                  )),
-            ),
-            Expanded(
-              child: Divider(
-                height: 3,
-                thickness: 3,
-                color: colorB,
+                  ),
+                ],
               ),
-            ),
-          ],
-        ),
         SizedBox(
           height: 60,
         ),
@@ -182,7 +186,7 @@ class AboutPage extends StatelessWidget {
                         buildHorizontalAdvantege("Cloud Functions"),
                         buildHorizontalAdvantege("TypeScript"),
                         buildHorizontalAdvantege("JavaScript"),
-                        buildHorizontalAdvantege("ApiRestFull"),
+                        buildHorizontalAdvantege("Api RestFul"),
                       ],
                     ),
                   ),

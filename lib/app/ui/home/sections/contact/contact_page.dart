@@ -20,7 +20,11 @@ class ContactPage extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Divider(height: 3, thickness: 3, color: colorB),
+                child: Divider(
+                    height: 3,
+                    thickness:
+                        controller.getMaxWidth <= mobileBreakpoint ? 2 : 3,
+                    color: colorB),
               ),
               Expanded(
                 child: Align(
@@ -40,7 +44,7 @@ class ContactPage extends StatelessWidget {
               Expanded(
                 child: Divider(
                   height: 3,
-                  thickness: 3,
+                  thickness: controller.getMaxWidth <= mobileBreakpoint ? 2 : 3,
                   color: colorB,
                 ),
               ),

@@ -10,7 +10,7 @@ class InitialPageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height,
+      // height: Get.height,
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -24,7 +24,7 @@ class InitialPageMobile extends StatelessWidget {
               child: AspectRatio(
                 aspectRatio: 0.9,
                 child: Image.asset(
-                  "images/perfil.JPG",
+                  "images/perfil.png",
                   filterQuality: FilterQuality.high,
                   fit: BoxFit.cover,
                 ),
@@ -189,6 +189,9 @@ class InitialPageMobile extends StatelessWidget {
                           ),
                         )
                       ],
+                    ),
+                    SizedBox(
+                      height: 40,
                     ),
                   ],
                 ),

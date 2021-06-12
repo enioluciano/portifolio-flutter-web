@@ -1,4 +1,3 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -27,8 +26,8 @@ class InitialPage extends StatelessWidget {
                           child: AspectRatio(
                             aspectRatio: 0.8,
                             child: Image.asset(
-                              "images/perfil.JPG",
-                              filterQuality: FilterQuality.high,
+                              "images/perfil.png",
+                              // filterQuality: FilterQuality.high,
                               fit: BoxFit.cover,
                             ),
                           ),

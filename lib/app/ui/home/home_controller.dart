@@ -85,6 +85,10 @@ class HomeController extends GetxController {
   bool get getPortifolioHover => portifolioHover.value;
   bool setPortifolioHover() => portifolioHover.value = !portifolioHover.value;
 
+  RxBool projectPokemon = false.obs;
+  bool get getProjectPokemon => projectPokemon.value;
+  bool setProjectPokemon() => projectPokemon.value = !projectPokemon.value;
+
   Rx<Color> color = Colors.transparent.obs;
 
   // RxBool mobianceHover = false.obs;
@@ -147,101 +151,8 @@ class HomeController extends GetxController {
           "https://play.google.com/store/search?q=jw%20Relatorio&hl=pt_BR&gl=US")
       : throw 'Could not launch https://play.google.com/store/search?q=jw%20Relatorio&hl=pt_BR&gl=US';
 
-  List<Widget> list = [
-    Column(
-      children: [
-        FlutterLogo(
-          size: 60,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text("Flutter"),
-      ],
-    ),
-    Column(
-      children: [
-        Icon(
-          FontAwesomeIcons.gitAlt,
-          size: 60,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text("Versionamento Git"),
-      ],
-    ),
-    Column(
-      children: [
-        Icon(
-          FontAwesomeIcons.googlePlay,
-          size: 60,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text("Google Play"),
-      ],
-    ),
-    Column(
-      children: [
-        Icon(
-          FontAwesomeIcons.appStore,
-          size: 60,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text("Apple Store"),
-      ],
-    ),
-    Column(
-      children: [
-        Icon(
-          FontAwesomeIcons.code,
-          size: 60,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text("Typescript"),
-      ],
-    ),
-    Column(
-      children: [
-        Icon(
-          FontAwesomeIcons.nodeJs,
-          size: 60,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text("Node Js"),
-      ],
-    ),
-    Column(
-      children: [
-        Icon(
-          Icons.free_breakfast,
-          size: 60,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text("GetX"),
-      ],
-    ),
-    Column(
-      children: [
-        Icon(
-          Icons.free_breakfast_outlined,
-          size: 60,
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Text("MobX"),
-      ],
-    ),
-  ];
+  void urlLaunchPokemon() async => await canLaunch(
+          "https://github.com/enioluciano/ProjetoPokemon")
+      ? await launch("https://github.com/enioluciano/ProjetoPokemon")
+      : throw 'Could not launch https://github.com/enioluciano/ProjetoPokemon';
 }

@@ -27,7 +27,7 @@ class ContactPageMobile extends StatelessWidget {
                     // color: Colors.blue,
                     color:
                         controller.getLocalHover ? Colors.green : Colors.blue,
-                    width: 3.0,
+                    width: 2.0,
                   )),
                 ),
                 child: Column(
@@ -68,7 +68,7 @@ class ContactPageMobile extends StatelessWidget {
 
                     color:
                         controller.getPhoneHover ? Colors.green : Colors.blue,
-                    width: 3.0,
+                    width: 2.0,
                   )),
                 ),
                 child: Column(
@@ -107,7 +107,7 @@ class ContactPageMobile extends StatelessWidget {
 
                     color:
                         controller.getEmailHover ? Colors.green : Colors.blue,
-                    width: 3.0,
+                    width: 2.0,
                   )),
                 ),
                 child: Column(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 import '../../../home_controller.dart';
 
@@ -10,9 +11,15 @@ class GridViewAppsCustom extends StatelessWidget {
   final Function(bool) onHover;
   final Function onTap;
   final Color color;
+  final Color textColor;
 
   GridViewAppsCustom(
-      {this.title, this.image, this.onHover, this.onTap, this.color});
+      {this.title,
+      this.image,
+      this.onHover,
+      this.onTap,
+      this.color,
+      this.textColor});
 
   @override
   Widget build(BuildContext context) {
@@ -42,25 +49,45 @@ class GridViewAppsCustom extends StatelessWidget {
           height: 20,
         ),
         InkWell(
-          hoverColor: Colors.transparent,
-          onHover: this.onHover,
-          onTap: this.onTap,
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border(
-                  bottom: BorderSide(
-                //                   <--- left side
-                // color: Colors.blue,
-                color: this.color,
-                // color: controller.getDesignaHover
-                //     ? Colors.green
-                //     : Colors.transparent,
-                width: 3.0,
-              )),
+            hoverColor: Colors.transparent,
+            onHover: this.onHover,
+            onTap: this.onTap,
+            child: Container(
+              width: 120,
+              height: 40,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
+                      // padding: MaterialStateProperty.all(EdgeInsets.all(16)),
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          BorderSide(width: 1, color: colorB)),
+                      overlayColor: MaterialStateProperty.all(colorB)),
+                  onPressed: () {},
+                  child: Text(
+                    "Download App",
+                    style: TextStyle(
+                      color: this.textColor,
+                    ),
+                  )),
+            )
+            // Container(
+            //   decoration: BoxDecoration(
+            //     border: Border(
+            //         bottom: BorderSide(
+            //       //                   <--- left side
+            //       // color: Colors.blue,
+            //       color: this.color,
+            //       // color: controller.getDesignaHover
+            //       //     ? Colors.green
+            //       //     : Colors.transparent,
+            //       width: 3.0,
+            //     )),
+            //   ),
+            //   child: Text("Download App"),
+            // ),
             ),
-            child: Text("Download App"),
-          ),
-        ),
       ],
     );
   }
