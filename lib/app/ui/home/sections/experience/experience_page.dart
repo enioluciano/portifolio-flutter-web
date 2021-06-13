@@ -262,7 +262,7 @@ class ExperiencePage extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Divider(height: 3, thickness: 2, color: colorB),
+                  child: Divider(height: 3, thickness: 3, color: colorB),
                 ),
                 Expanded(
                   flex: 2,
@@ -283,7 +283,7 @@ class ExperiencePage extends StatelessWidget {
                 Expanded(
                   child: Divider(
                     height: 3,
-                    thickness: 2,
+                    thickness: 3,
                     color: colorB,
                   ),
                 ),

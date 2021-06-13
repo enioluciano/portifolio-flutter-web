@@ -19,7 +19,7 @@ class ProjectPublishedPage extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Divider(height: 3, thickness: 2, color: colorB),
+                child: Divider(height: 3, thickness: 3, color: colorB),
               ),
               Expanded(
                 flex: 2,
@@ -39,7 +39,7 @@ class ProjectPublishedPage extends StatelessWidget {
               Expanded(
                 child: Divider(
                   height: 3,
-                  thickness: 2,
+                  thickness: 3,
                   color: colorB,
                 ),
               ),
@@ -58,9 +58,10 @@ class ProjectPublishedPage extends StatelessWidget {
                         Obx(
                           () => GridViewAppsCustom(
                             title: "Designa JW",
+                            text: "Download App",
                             image: "images/designa.png",
                             onHover: (value) => controller.setDesignaHover(),
-                            onTap: () => controller.urlLaunchDesignaJw(),
+                            onPressed: () => controller.urlLaunchDesignaJw(),
                             textColor: controller.getDesignaHover
                                 ? Colors.white
                                 : Colors.blue,
@@ -69,9 +70,10 @@ class ProjectPublishedPage extends StatelessWidget {
                         Obx(
                           () => GridViewAppsCustom(
                             title: "Relatório JW",
+                            text: "Download App",
                             image: "images/relatorioJW.png",
                             onHover: (value) => controller.setRelatorioHover(),
-                            onTap: () => controller.urlLaunchRelatorioJw(),
+                            onPressed: () => controller.urlLaunchRelatorioJw(),
                             textColor: controller.getRelatorioHover
                                 ? Colors.white
                                 : Colors.blue,
@@ -79,14 +81,14 @@ class ProjectPublishedPage extends StatelessWidget {
                         ),
                         Obx(
                           () => GridViewAppsCustom(
-                            title: "Mobiance",
-                            image: "images/mobiance.png",
-                            onHover: (value) => controller.setMobianceHover(),
-                            onTap: () => controller.urlLaunchMobiance(),
-                            textColor: controller.getMobianceHover
-                                ? Colors.white
-                                : Colors.blue,
-                          ),
+                              title: "Mobiance",
+                              text: "Aguardando",
+                              image: "images/mobiance.png",
+                              onHover: (value) => controller.setMobianceHover(),
+                              onPressed: () => controller.urlLaunchMobiance(),
+                              textColor: controller.getMobianceHover
+                                  ? Colors.white
+                                  : Colors.blue),
                         ),
                       ],
                     ),

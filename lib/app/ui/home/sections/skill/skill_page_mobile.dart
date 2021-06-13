@@ -169,7 +169,7 @@ class SkillPageMobile extends StatelessWidget {
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 200,
+                      maxCrossAxisExtent: 180,
                       crossAxisSpacing: 5,
                       mainAxisSpacing: 5),
                   padding: EdgeInsets.symmetric(

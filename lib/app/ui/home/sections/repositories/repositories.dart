@@ -26,6 +26,7 @@ class RepositoriesPages extends StatelessWidget {
                       child: Divider(height: 3, thickness: 3, color: colorB),
                     ),
                     Expanded(
+                      flex: 2,
                       child: Align(
                           alignment: Alignment.center,
                           child: Text(

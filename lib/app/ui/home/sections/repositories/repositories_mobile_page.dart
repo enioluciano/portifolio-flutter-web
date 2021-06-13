@@ -320,14 +320,15 @@ class RepositoriesMobilePage extends StatelessWidget {
               height: 30,
             ),
             InkWell(
-              onHover: (value) => controller.setLocalHover(),
-              onTap: () => controller.urlLaunchTodoGetX(),
+              onHover: (value) => controller.setProjectPokemon(),
+              onTap: () => controller.urlLaunchPokemon(),
               child: Obx(
                 () => Card(
                   elevation: 3,
                   shadowColor:
-                      controller.getLocalHover ? Colors.green : Colors.blue,
+                      controller.getProjectPokemon ? Colors.green : Colors.blue,
                   child: Container(
+                    padding: EdgeInsets.all(8),
                     height: 120,
                     width: Get.width * 0.7,
                     decoration: BoxDecoration(
@@ -335,7 +336,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                           bottom: BorderSide(
                         //                   <--- left side
                         // color: Colors.blue,
-                        color: controller.getLocalHover
+                        color: controller.getProjectPokemon
                             ? Colors.green
                             : Colors.blue,
                         width: 3.0,
@@ -349,7 +350,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Text(
-                            "app_toDo",
+                            "ProjetoPokemon",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700, color: colorB),
                           ),
@@ -357,74 +358,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "App voltado para as tarefas",
-                            style: TextStyle(color: Colors.grey, fontSize: 14),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Icon(
-                                FontAwesomeIcons.github,
-                                size: 20,
-                                color: Colors.black,
-                              ),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              Text("Github")
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            InkWell(
-              onHover: (value) => controller.setLocalHover(),
-              onTap: () => controller.urlLaunchTodoGetX(),
-              child: Obx(
-                () => Card(
-                  elevation: 3,
-                  shadowColor:
-                      controller.getLocalHover ? Colors.green : Colors.blue,
-                  child: Container(
-                    height: 120,
-                    width: Get.width * 0.7,
-                    decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                        //                   <--- left side
-                        // color: Colors.blue,
-                        color: controller.getLocalHover
-                            ? Colors.green
-                            : Colors.blue,
-                        width: 3.0,
-                      )),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            "app_toDo",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700, color: colorB),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "App voltado para as tarefas",
+                            "Cards Pokemon",
                             style: TextStyle(color: Colors.grey, fontSize: 14),
                           ),
                           SizedBox(

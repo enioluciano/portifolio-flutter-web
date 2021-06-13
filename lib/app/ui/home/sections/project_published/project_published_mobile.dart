@@ -15,12 +15,15 @@ class ProjectPublishedMobile extends StatelessWidget {
           Obx(
             () => GridViewAppsCustom(
               title: "Designa JW",
+              text: "Download App",
               image: "images/designa.png",
               color: controller.getDesignaHover
                   ? Colors.green
                   : Colors.transparent,
               onHover: (value) => controller.setDesignaHover(),
-              onTap: () => controller.urlLaunchDesignaJw(),
+              onPressed: () => controller.urlLaunchDesignaJw(),
+              textColor:
+                  controller.getDesignaHover ? Colors.white : Colors.blue,
             ),
           ),
           SizedBox(
@@ -29,12 +32,15 @@ class ProjectPublishedMobile extends StatelessWidget {
           Obx(
             () => GridViewAppsCustom(
               title: "Relatório JW",
+              text: "Download App",
               image: "images/relatorioJW.png",
               color: controller.getRelatorioHover
                   ? Colors.green
                   : Colors.transparent,
               onHover: (value) => controller.setRelatorioHover(),
-              onTap: () => controller.urlLaunchRelatorioJw(),
+              onPressed: () => controller.urlLaunchRelatorioJw(),
+              textColor:
+                  controller.getRelatorioHover ? Colors.white : Colors.blue,
             ),
           ),
           SizedBox(
@@ -43,12 +49,15 @@ class ProjectPublishedMobile extends StatelessWidget {
           Obx(
             () => GridViewAppsCustom(
               title: "Mobiance",
+              text: "Aguardando",
               image: "images/mobiance.png",
               color: controller.getMobianceHover
                   ? Colors.green
                   : Colors.transparent,
               onHover: (value) => controller.setMobianceHover(),
-              onTap: () => controller.urlLaunchMobiance(),
+              onPressed: () => controller.urlLaunchMobiance(),
+              textColor:
+                  controller.getMobianceHover ? Colors.white : Colors.blue,
             ),
           ),
         ],

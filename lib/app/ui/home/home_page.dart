@@ -25,13 +25,15 @@ class HomePage extends GetView<HomeController> {
       print(constraits.maxWidth);
       return Scaffold(
           backgroundColor: Get.isDarkMode ? Colors.black : Colors.white,
-          appBar: constraits.maxWidth < mobileBreakpoint
+          appBar: constraits.maxWidth <= tabletBreakPoint
               ? PreferredSize(
                   child: MobileAppBar(),
                   preferredSize: Size(double.infinity, 74))
               : PreferredSize(
-                  child: WebAppBar(), preferredSize: Size(double.infinity, 74)),
-          drawer: constraits.maxWidth < mobileBreakpoint ? Drawer() : null,
+                  child: WebAppBar(),
+                  preferredSize:
+                      Size(double.infinity, AppBar().preferredSize.height)),
+          // drawer: constraits.maxWidth < mobileBreakpoint ? Drawer() : null,
           body: SingleChildScrollView(
             child: Center(
               child: Column(

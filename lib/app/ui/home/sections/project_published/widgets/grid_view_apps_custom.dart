@@ -12,11 +12,15 @@ class GridViewAppsCustom extends StatelessWidget {
   final Function onTap;
   final Color color;
   final Color textColor;
+  final String text;
+  final Function onPressed;
 
   GridViewAppsCustom(
       {this.title,
       this.image,
       this.onHover,
+      this.onPressed,
+      this.text,
       this.onTap,
       this.color,
       this.textColor});
@@ -48,46 +52,47 @@ class GridViewAppsCustom extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        InkWell(
-            hoverColor: Colors.transparent,
-            onHover: this.onHover,
-            onTap: this.onTap,
-            child: Container(
-              width: 120,
-              height: 40,
-              child: ElevatedButton(
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20))),
-                      // padding: MaterialStateProperty.all(EdgeInsets.all(16)),
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          BorderSide(width: 1, color: colorB)),
-                      overlayColor: MaterialStateProperty.all(colorB)),
-                  onPressed: () {},
-                  child: Text(
-                    "Download App",
-                    style: TextStyle(
-                      color: this.textColor,
-                    ),
-                  )),
-            )
-            // Container(
-            //   decoration: BoxDecoration(
-            //     border: Border(
-            //         bottom: BorderSide(
-            //       //                   <--- left side
-            //       // color: Colors.blue,
-            //       color: this.color,
-            //       // color: controller.getDesignaHover
-            //       //     ? Colors.green
-            //       //     : Colors.transparent,
-            //       width: 3.0,
-            //     )),
-            //   ),
-            //   child: Text("Download App"),
-            // ),
-            ),
+        // InkWell(
+        // hoverColor: Colors.transparent,
+        // onHover: this.onHover,
+        // onTap: this.onTap,
+        // child:
+        Container(
+          width: 120,
+          height: 40,
+          child: ElevatedButton(
+              style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20))),
+                  // padding: MaterialStateProperty.all(EdgeInsets.all(16)),
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                  side: MaterialStateProperty.all(
+                      BorderSide(width: 1, color: Colors.blue[100])),
+                  overlayColor: MaterialStateProperty.all(Colors.blue[100])),
+              onPressed: this.onPressed,
+              child: Text(
+                this.text,
+                style: TextStyle(
+                  color: this.textColor,
+                ),
+              )),
+          // )
+          // Container(
+          //   decoration: BoxDecoration(
+          //     border: Border(
+          //         bottom: BorderSide(
+          //       //                   <--- left side
+          //       // color: Colors.blue,
+          //       color: this.color,
+          //       // color: controller.getDesignaHover
+          //       //     ? Colors.green
+          //       //     : Colors.transparent,
+          //       width: 3.0,
+          //     )),
+          //   ),
+          //   child: Text("Download App"),
+          // ),
+        ),
       ],
     );
   }

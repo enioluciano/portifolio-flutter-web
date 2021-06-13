@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -11,7 +12,7 @@ class InitialPage extends StatelessWidget {
   final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
-    return controller.getMaxWidth >= 1200
+    return controller.getMaxWidth >= mobileBreakpoint
         ? Container(
             height: Get.height,
             child: Column(
@@ -57,13 +58,15 @@ class InitialPage extends StatelessWidget {
                                 flex: 2,
                                 child: Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Ênio Luciano",
-                                    style: TextStyle(
-                                        fontSize: 40.0,
-                                        fontWeight: FontWeight.bold,
-                                        color: colorB),
-                                    // textAlign: TextAlign.center,
+                                  child: SizedBox(
+                                    height: 40,
+                                    child: AutoSizeText(
+                                      "Ênio Luciano",
+                                      style: TextStyle(
+                                          fontSize: 40,
+                                          color: colorB,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -210,7 +213,7 @@ class InitialPage extends StatelessWidget {
                                 onTap: () => controller.urlLaunchInstagram(),
                                 child: Icon(
                                   FontAwesomeIcons.instagram,
-                                  color: Colors.black,
+                                  color: Colors.blueGrey,
                                 ),
                               )
                               // TextButton.icon(
