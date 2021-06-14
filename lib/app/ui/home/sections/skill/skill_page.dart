@@ -110,7 +110,7 @@ class SkillPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       key: JosKey.keySkill,
-      child: controller.getMaxWidth <= mobileBreakpoint
+      child: controller.getMaxWidth <= tabletBreakPoint
           ? SkillPageMobile()
           : Column(
               children: [
@@ -127,7 +127,7 @@ class SkillPage extends StatelessWidget {
                             "Habilidades",
                             style: TextStyle(
                               fontSize:
-                                  controller.getMaxWidth <= mobileBreakpoint
+                                  controller.getMaxWidth <= tabletBreakPoint
                                       ? 22
                                       : 45,
                               color: corSection,
@@ -166,7 +166,6 @@ class SkillPage extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                             vertical: 8,
                           ),
-                          // horizontal: constraits.maxWidth >= tabletBreakPoint ? 0 : 16),
                           itemBuilder: (context, index) {
                             return Card(
                               elevation: 10,

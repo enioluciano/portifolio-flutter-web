@@ -44,29 +44,11 @@ class HomePage extends GetView<HomeController> {
                       child: LayoutBuilder(
                         builder: (context, constraints) {
                           controller.maxWidth.value = constraints.maxWidth;
-                          print("*******");
-                          print(controller.getMaxWidth);
-                          print("*******");
+                          print(Get.height);
                           return Padding(
                             padding: EdgeInsets.symmetric(horizontal: 16),
                             child: Column(
                               children: [
-                                // SizedBox(
-                                //   height: 40,
-                                //   child: AutoSizeText(
-                                //     "Criação de Apps Android e IOS com flutter - Crie 16 Apps ",
-                                //     style: TextStyle(
-                                //         fontSize: 120,
-                                //         color: Colors.black,
-                                //         fontWeight: FontWeight.bold),
-                                //   ),
-                                // ),
-                                // Text('dev_mobile'.tr),
-                                // TextButton(
-                                //     onPressed: () {
-                                //       Get.updateLocale(Locale('en', 'US'));
-                                //     },
-                                //     child: Text("Trocar")),
                                 InitialPage(),
                                 AboutPage(),
                                 SkillPage(),
@@ -87,18 +69,3 @@ class HomePage extends GetView<HomeController> {
     });
   }
 }
-
-// Scaffold(
-//   appBar: AppBar(
-//     title: Text('HomePage'),
-//     actions: [
-//       IconButton(
-//           icon: Icon(FontAwesomeIcons.moon),
-//           onPressed: () {
-//             ThemeService().changeThemeMode();
-//             ThemeService().isSavedDarkMode();
-//           })
-//     ],
-//   ),
-//   body: Container(),
-// );

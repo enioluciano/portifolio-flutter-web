@@ -28,7 +28,7 @@ class ProjectPublishedPage extends StatelessWidget {
                     child: Text(
                       "Apps publicados",
                       style: TextStyle(
-                        fontSize: controller.getMaxWidth <= mobileBreakpoint
+                        fontSize: controller.getMaxWidth <= tabletBreakPoint
                             ? 18
                             : 45,
                         color: corSection,
@@ -50,7 +50,7 @@ class ProjectPublishedPage extends StatelessWidget {
           ),
           Column(
             children: [
-              controller.getMaxWidth <= mobileBreakpoint
+              controller.getMaxWidth <= tabletBreakPoint
                   ? ProjectPublishedMobile()
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -71,7 +71,7 @@ class ProjectPublishedPage extends StatelessWidget {
                           () => GridViewAppsCustom(
                             title: "Relatório JW",
                             text: "Download App",
-                            image: "images/relatorioJW.png",
+                            image: "images/relatoriojw.png",
                             onHover: (value) => controller.setRelatorioHover(),
                             onPressed: () => controller.urlLaunchRelatorioJw(),
                             textColor: controller.getRelatorioHover

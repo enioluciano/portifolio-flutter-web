@@ -13,7 +13,7 @@ class RepositoriesPages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       key: JosKey.keyRepository,
-      child: Get.width <= mobileBreakpoint
+      child: Get.width <= tabletBreakPoint
           ? RepositoriesMobilePage()
           : Column(
               children: <Widget>[
@@ -33,7 +33,7 @@ class RepositoriesPages extends StatelessWidget {
                             "Repositórios",
                             style: TextStyle(
                               fontSize:
-                                  controller.getMaxWidth <= mobileBreakpoint
+                                  controller.getMaxWidth <= tabletBreakPoint
                                       ? 22
                                       : 45,
                               color: corSection,
@@ -433,76 +433,6 @@ class RepositoriesPages extends StatelessWidget {
                         SizedBox(
                           width: 30,
                         ),
-                        // InkWell(
-                        //   onHover: (value) => controller.setLocalHover(),
-                        //   onTap: () => controller.urlLaunchPokemon(),
-                        //   child: Obx(
-                        //     () => Card(
-                        //       elevation: 3,
-                        //       shadowColor: controller.getLocalHover
-                        //           ? Colors.green
-                        //           : Colors.blue,
-                        //       child: Container(
-                        //         padding: EdgeInsets.all(8),
-                        //         height: 120,
-                        //         width: Get.width * 0.25,
-                        //         decoration: BoxDecoration(
-                        //           border: Border(
-                        //               bottom: BorderSide(
-                        //             //                   <--- left side
-                        //             // color: Colors.blue,
-                        //             color: controller.getLocalHover
-                        //                 ? Colors.green
-                        //                 : Colors.blue,
-                        //             width: 3.0,
-                        //           )),
-                        //         ),
-                        //         child: Padding(
-                        //           padding: const EdgeInsets.all(8.0),
-                        //           child: Column(
-                        //             crossAxisAlignment:
-                        //                 CrossAxisAlignment.start,
-                        //             mainAxisSize: MainAxisSize.min,
-                        //             mainAxisAlignment:
-                        //                 MainAxisAlignment.spaceAround,
-                        //             children: [
-                        //               Text(
-                        //                 "app_toDo",
-                        //                 style: TextStyle(
-                        //                     fontWeight: FontWeight.w700,
-                        //                     color: colorB),
-                        //               ),
-                        //               SizedBox(
-                        //                 height: 10,
-                        //               ),
-                        //               Text(
-                        //                 "Cards Pokemon",
-                        //                 style: TextStyle(
-                        //                     color: Colors.grey, fontSize: 14),
-                        //               ),
-                        //               SizedBox(
-                        //                 height: 10,
-                        //               ),
-                        //               Row(
-                        //                 children: [
-                        //                   Icon(
-                        //                     FontAwesomeIcons.github,
-                        //                     size: 20,
-                        //                     color: Colors.black,
-                        //                   ),
-                        //                   SizedBox(
-                        //                     width: 4,
-                        //                   ),
-                        //                   Text("Github")
-                        //                 ],
-                        //               )
-                        //             ],
-                        //           ),
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
                       ],
                     ),
                     SizedBox(

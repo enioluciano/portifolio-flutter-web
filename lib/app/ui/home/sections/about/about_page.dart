@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/home/sections/about/about_page_mobile.dart';
 import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
-import 'package:timelines/timelines.dart';
 
 import '../../home_controller.dart';
 
@@ -31,7 +29,7 @@ class AboutPage extends StatelessWidget {
     return Column(
       key: JosKey.keyAbout,
       children: [
-        Get.width <= mobileBreakpoint
+        Get.width <= tabletBreakPoint
             ? AboutPageMobile()
             : Row(
                 children: [
@@ -44,9 +42,7 @@ class AboutPage extends StatelessWidget {
                         child: Text(
                           "Sobre mim",
                           style: TextStyle(
-                            fontSize: controller.getMaxWidth <= mobileBreakpoint
-                                ? 22
-                                : 45,
+                            fontSize: 45,
                             color: corSection,
                             fontWeight: FontWeight.bold,
                             // decoration: TextDecoration.underline
@@ -137,22 +133,6 @@ class AboutPage extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   mainAxisSize: MainAxisSize.min,
-                  //   children: [
-                  //     Expanded(
-                  //       child: Text(
-                  //         "Fiquem a vontade para conhecer um pouco da minha trajetória profissional!",
-                  //         style: TextStyle(fontSize: 16, color: colorIn),
-                  //       ),
-                  //     ),
-                  //     Icon(
-                  //       Icons.tag_faces_rounded,
-                  //       color: colorIn,
-                  //     )
-                  //   ],
-                  // ),
                   SizedBox(
                     height: 30,
                   ),

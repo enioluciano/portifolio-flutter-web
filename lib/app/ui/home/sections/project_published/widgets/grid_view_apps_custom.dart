@@ -58,7 +58,7 @@ class GridViewAppsCustom extends StatelessWidget {
         // onTap: this.onTap,
         // child:
         Container(
-          width: 120,
+          width: 130,
           height: 40,
           child: ElevatedButton(
               style: ButtonStyle(

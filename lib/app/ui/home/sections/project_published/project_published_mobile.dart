@@ -33,7 +33,7 @@ class ProjectPublishedMobile extends StatelessWidget {
             () => GridViewAppsCustom(
               title: "Relatório JW",
               text: "Download App",
-              image: "images/relatorioJW.png",
+              image: "images/relatoriojw.png",
               color: controller.getRelatorioHover
                   ? Colors.green
                   : Colors.transparent,

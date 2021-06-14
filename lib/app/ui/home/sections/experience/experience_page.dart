@@ -81,7 +81,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work,
-              size: Get.width <= mobileBreakpoint ? 14 : 18,
+              size: Get.width <= tabletBreakPoint ? 14 : 18,
               color: Colors.green,
             ),
             SizedBox(
@@ -91,7 +91,7 @@ class ExperiencePage extends StatelessWidget {
               "Maio 2021 - Atual",
               style: TextStyle(
                   color: Colors.grey,
-                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
+                  fontSize: Get.width <= tabletBreakPoint ? 10 : 14),
             ),
           ],
         )
@@ -157,7 +157,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work_off_outlined,
-              size: Get.width <= mobileBreakpoint ? 14 : 18,
+              size: Get.width <= tabletBreakPoint ? 14 : 18,
               color: Colors.red,
             ),
             SizedBox(
@@ -167,7 +167,7 @@ class ExperiencePage extends StatelessWidget {
               "Fev. 2021 - Maio 2021",
               style: TextStyle(
                   color: Colors.grey,
-                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
+                  fontSize: Get.width <= tabletBreakPoint ? 10 : 14),
             ),
           ],
         )
@@ -232,7 +232,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work,
-              size: Get.width <= mobileBreakpoint ? 14 : 18,
+              size: Get.width <= tabletBreakPoint ? 14 : 18,
               color: Colors.green,
             ),
             SizedBox(
@@ -242,7 +242,7 @@ class ExperiencePage extends StatelessWidget {
               "Abril 2020 - Atual",
               style: TextStyle(
                   color: Colors.grey,
-                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
+                  fontSize: Get.width <= tabletBreakPoint ? 10 : 14),
             ),
           ],
         )
@@ -271,7 +271,7 @@ class ExperiencePage extends StatelessWidget {
                       child: Text(
                         "Experiência",
                         style: TextStyle(
-                          fontSize: controller.getMaxWidth <= mobileBreakpoint
+                          fontSize: controller.getMaxWidth <= tabletBreakPoint
                               ? 22
                               : 45,
                           color: corSection,
@@ -322,18 +322,6 @@ class ExperiencePage extends StatelessWidget {
               height: 60,
             ),
           ],
-        )
-        // Timeline.tileBuilder(
-        //   builder: TimelineTileBuilder.fromStyle(
-        //     contentsAlign: ContentsAlign.alternating,
-        //     contentsBuilder: (context, index) => Padding(
-        //       padding: const EdgeInsets.all(24.0),
-        //       child: Text('Timeline Event $index'),
-        //     ),
-        //     itemCount: 10,
-        //   ),
-        // ),
-
-        );
+        ));
   }
 }

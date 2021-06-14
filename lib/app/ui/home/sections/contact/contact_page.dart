@@ -23,7 +23,7 @@ class ContactPage extends StatelessWidget {
                 child: Divider(
                     height: 3,
                     thickness:
-                        controller.getMaxWidth <= mobileBreakpoint ? 2 : 3,
+                        controller.getMaxWidth <= tabletBreakPoint ? 2 : 3,
                     color: colorB),
               ),
               Expanded(
@@ -32,7 +32,7 @@ class ContactPage extends StatelessWidget {
                     child: Text(
                       "Contato",
                       style: TextStyle(
-                        fontSize: controller.getMaxWidth <= mobileBreakpoint
+                        fontSize: controller.getMaxWidth <= tabletBreakPoint
                             ? 22
                             : 45,
                         color: corSection,
@@ -44,7 +44,7 @@ class ContactPage extends StatelessWidget {
               Expanded(
                 child: Divider(
                   height: 3,
-                  thickness: controller.getMaxWidth <= mobileBreakpoint ? 2 : 3,
+                  thickness: controller.getMaxWidth <= tabletBreakPoint ? 2 : 3,
                   color: colorB,
                 ),
               ),
@@ -53,7 +53,7 @@ class ContactPage extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          controller.getMaxWidth <= mobileBreakpoint
+          controller.getMaxWidth <= tabletBreakPoint
               ? ContactPageMobile()
               : Wrap(
                   alignment: WrapAlignment.spaceEvenly,

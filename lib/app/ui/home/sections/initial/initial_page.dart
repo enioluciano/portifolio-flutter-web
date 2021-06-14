@@ -12,9 +12,9 @@ class InitialPage extends StatelessWidget {
   final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
-    return controller.getMaxWidth >= mobileBreakpoint
+    return controller.getMaxWidth >= tabletBreakPoint
         ? Container(
-            height: Get.height,
+            height: 821,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -38,10 +38,6 @@ class InitialPage extends StatelessWidget {
                     SizedBox(
                       width: 40,
                     ),
-                    //         CircleAvatar(
-                    //   radius: 200,
-                    //   backgroundImage: AssetImage("/images/perfil.JPG"),
-                    // )),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,7 +90,7 @@ class InitialPage extends StatelessWidget {
                                   style: TextStyle(
                                       fontFamily: "Roboto-light",
                                       fontWeight: FontWeight.w400,
-                                      fontSize: 20),
+                                      fontSize: 16),
                                 ),
                               ),
                             ],
@@ -115,7 +111,7 @@ class InitialPage extends StatelessWidget {
                                   style: TextStyle(
                                       fontFamily: "Roboto-light",
                                       fontWeight: FontWeight.w400,
-                                      fontSize: 20),
+                                      fontSize: 16),
                                 ),
                               ),
                             ],
@@ -135,7 +131,7 @@ class InitialPage extends StatelessWidget {
                                 style: TextStyle(
                                     fontFamily: "Roboto-light",
                                     fontWeight: FontWeight.w400,
-                                    fontSize: 20),
+                                    fontSize: 16),
                               ),
                             ],
                           ),
@@ -154,7 +150,7 @@ class InitialPage extends StatelessWidget {
                                 style: TextStyle(
                                     fontFamily: "Roboto-light",
                                     fontWeight: FontWeight.w400,
-                                    fontSize: 20),
+                                    fontSize: 16),
                               ),
                             ],
                           ),
@@ -173,16 +169,6 @@ class InitialPage extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                               ),
-                              // TextButton.icon(
-                              //     onPressed: () => controller.urlLaunchGitHub(),
-                              //     style: ButtonStyle(
-                              //         overlayColor: MaterialStateProperty.all(
-                              //             Colors.transparent)),
-                              //     icon: Icon(
-                              //       FontAwesomeIcons.github,
-                              //       color: Colors.black,
-                              //     ),
-                              //     label: Text("Github")),
                               SizedBox(
                                 width: 40,
                               ),
@@ -194,16 +180,6 @@ class InitialPage extends StatelessWidget {
                                   FontAwesomeIcons.linkedin,
                                 ),
                               ),
-                              // TextButton.icon(
-                              //     onPressed: () => controller.urlLaunchLinkendIn(),
-                              //     style: ButtonStyle(
-                              //         overlayColor: MaterialStateProperty.all(
-                              //             Colors.transparent)),
-                              //     icon: Icon(FontAwesomeIcons.linkedin),
-                              //     label: Text(
-                              //       "Linkendin",
-                              //       style: TextStyle(color: Colors.grey),
-                              //     )),
                               SizedBox(
                                 width: 40,
                               ),
@@ -216,86 +192,16 @@ class InitialPage extends StatelessWidget {
                                   color: Colors.blueGrey,
                                 ),
                               )
-                              // TextButton.icon(
-                              //     style: ButtonStyle(
-                              //         overlayColor: MaterialStateProperty.all(
-                              //             Colors.transparent)),
-                              //     onPressed: () => controller.urlLaunchInstagram(),
-                              //     icon: Icon(
-                              //       FontAwesomeIcons.instagram,
-                              //       color: Colors.black,
-                              //     ),
-                              //     label: Text(
-                              //       "Instagram",
-                              //       style: TextStyle(color: colorB),
-                              //     )),
                             ],
                           ),
-
-                          //Detalhes importam, vale a pena esperar e fazê-los direito.
-                          // Container(
-                          //   margin: EdgeInsets.symmetric(horizontal: 18),
-                          //   decoration: BoxDecoration(
-                          //       color: Colors.white,
-                          //       border: Border.all(color: Colors.blue, width: 3),
-                          //       borderRadius: BorderRadius.circular(20)),
-                          //   child: Padding(
-                          //     padding: const EdgeInsets.all(12.0),
-                          //     child: Row(
-                          //       mainAxisSize: MainAxisSize.min,
-                          //       children: [
-                          //         Icon(
-                          //           Icons.android_rounded,
-                          //           color: Colors.green,
-                          //         ),
-                          //         SizedBox(
-                          //           width: 4,
-                          //         ),
-                          //         AnimatedTextKit(animatedTexts: [
-                          //           TypewriterAnimatedText('Desenvolvedor Mobile',
-                          //               speed: Duration(milliseconds: 100),
-                          //               textStyle:
-                          //                   TextStyle(fontWeight: FontWeight.bold))
-                          //         ]),
-                          //         SizedBox(
-                          //           width: 4,
-                          //         ),
-                          //         Align(
-                          //           alignment: Alignment.topCenter,
-                          //           child: FaIcon(
-                          //             FontAwesomeIcons.apple,
-                          //             color: Colors.black,
-                          //             size: 25,
-                          //           ),
-                          //         ),
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
                         ],
                       ),
                     ),
                   ],
                 ),
-
-                // SizedBox(
-                //   height: 50,
-                // ),
-
-                // SizedBox(
-                //   height: 50,
-                // ),
-
-                // SizedBox(
-                //   height: 70,
-                // ),
               ],
             ),
           )
-        : controller.getMaxWidth >= mobileBreakpoint
-            ? Container(
-                child: Text("Tablet"),
-              )
-            : InitialPageMobile();
+        : InitialPageMobile();
   }
 }
