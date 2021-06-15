@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
+import 'package:portifolio_flutter_web/app/ui/util/themes_service.dart';
 
 class MobileAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      // iconTheme: IconThemeData(color: corAppBar),
       elevation: 0,
-      backgroundColor: Colors.white,
+      backgroundColor: Get.isDarkMode ? Colors.black : Colors.white,
       title: Text(
         "Seja Bem-vindo!",
         style: TextStyle(color: colorB),
@@ -15,11 +16,19 @@ class MobileAppBar extends StatelessWidget {
       centerTitle: true,
       actions: [
         IconButton(
-            icon: Icon(
-              Icons.nights_stay_outlined,
-              color: Colors.deepPurple,
-            ),
-            onPressed: () {})
+            icon: Get.isDarkMode
+                ? Icon(
+                    Icons.wb_sunny_outlined,
+                    color: Colors.yellow[700],
+                  )
+                : Icon(
+                    Icons.nights_stay,
+                    color: Colors.deepPurple,
+                  ),
+            onPressed: () {
+              ThemeService().changeThemeMode();
+              // ThemeService().isSavedDarkMode();
+            })
       ],
     );
   }

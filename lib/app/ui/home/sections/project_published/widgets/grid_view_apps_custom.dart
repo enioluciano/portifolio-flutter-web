@@ -65,10 +65,13 @@ class GridViewAppsCustom extends StatelessWidget {
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20))),
                   // padding: MaterialStateProperty.all(EdgeInsets.all(16)),
-                  backgroundColor: MaterialStateProperty.all(Colors.white),
-                  side: MaterialStateProperty.all(
-                      BorderSide(width: 1, color: Colors.blue[100])),
-                  overlayColor: MaterialStateProperty.all(Colors.blue[100])),
+                  backgroundColor: MaterialStateProperty.all(
+                      Get.isDarkMode ? Colors.black : Colors.white),
+                  side: MaterialStateProperty.all(BorderSide(
+                      width: 1,
+                      color: Get.isDarkMode ? Colors.white : Colors.blue[100])),
+                  overlayColor: MaterialStateProperty.all(
+                      Get.isDarkMode ? Colors.grey[800] : Colors.blue[100])),
               onPressed: this.onPressed,
               child: Text(
                 this.text,

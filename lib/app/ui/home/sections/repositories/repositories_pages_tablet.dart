@@ -69,7 +69,9 @@ class RepositoryPageTablet extends StatelessWidget {
                               //                   <--- left side
                               // color: Colors.blue,
                               color: controller.getMyfriedgeHover
-                                  ? Colors.green
+                                  ? Get.isDarkMode
+                                      ? corDeepOrange
+                                      : Colors.green
                                   : Colors.blue,
                               width: 3.0,
                             )),
@@ -139,7 +141,9 @@ class RepositoryPageTablet extends StatelessWidget {
                             //                   <--- left side
                             // color: Colors.blue,
                             color: controller.getAppTodoHover
-                                ? Colors.green
+                                ? Get.isDarkMode
+                                    ? corDeepOrange
+                                    : Colors.green
                                 : Colors.blue,
                             width: 3.0,
                           )),
@@ -213,7 +217,9 @@ class RepositoryPageTablet extends StatelessWidget {
                             //                   <--- left side
                             // color: Colors.blue,
                             color: controller.getBlogHover
-                                ? Colors.green
+                                ? Get.isDarkMode
+                                    ? corDeepOrange
+                                    : Colors.green
                                 : Colors.blue,
                             width: 3.0,
                           )),
@@ -282,7 +288,9 @@ class RepositoryPageTablet extends StatelessWidget {
                             //                   <--- left side
                             // color: Colors.blue,
                             color: controller.getPortifolioHover
-                                ? Colors.green
+                                ? Get.isDarkMode
+                                    ? corDeepOrange
+                                    : Colors.green
                                 : Colors.blue,
                             width: 3.0,
                           )),
@@ -357,7 +365,9 @@ class RepositoryPageTablet extends StatelessWidget {
                             //                   <--- left side
                             // color: Colors.blue,
                             color: controller.getProjectPokemon
-                                ? Colors.green
+                                ? Get.isDarkMode
+                                    ? corDeepOrange
+                                    : Colors.green
                                 : Colors.blue,
                             width: 3.0,
                           )),

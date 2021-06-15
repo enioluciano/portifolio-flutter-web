@@ -64,7 +64,9 @@ class ContactPageWeb extends StatelessWidget {
                         //                   <--- left side
                         // color: Colors.blue,
                         color: controller.getLocalHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 3.0,
                       )),
@@ -74,6 +76,9 @@ class ContactPageWeb extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.location_on, size: 70),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text("Parnaíba - PI"),
                       ],
                     ),
@@ -100,7 +105,9 @@ class ContactPageWeb extends StatelessWidget {
                         //                   <--- left side
 
                         color: controller.getPhoneHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 3.0,
                       )),
@@ -109,6 +116,9 @@ class ContactPageWeb extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.phone, size: 70),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text("(86) 9 9452-8588"),
                       ],
                     ),
@@ -137,7 +147,9 @@ class ContactPageWeb extends StatelessWidget {
                         //                   <--- left side
 
                         color: controller.getEmailHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 3.0,
                       )),
@@ -147,6 +159,9 @@ class ContactPageWeb extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.email, size: 70),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text("eniolucianoo@gmail.com"),
                       ],
                     ),

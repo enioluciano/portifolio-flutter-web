@@ -28,7 +28,8 @@ class HomePage extends GetView<HomeController> {
           appBar: constraits.maxWidth <= tabletBreakPoint
               ? PreferredSize(
                   child: MobileAppBar(),
-                  preferredSize: Size(double.infinity, 74))
+                  preferredSize:
+                      Size(double.infinity, AppBar().preferredSize.height))
               : PreferredSize(
                   child: WebAppBar(),
                   preferredSize:

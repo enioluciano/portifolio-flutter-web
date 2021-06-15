@@ -64,7 +64,9 @@ class ContactPageTablet extends StatelessWidget {
                         //                   <--- left side
                         // color: Colors.blue,
                         color: controller.getLocalHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 3.0,
                       )),
@@ -100,7 +102,9 @@ class ContactPageTablet extends StatelessWidget {
                         //                   <--- left side
 
                         color: controller.getPhoneHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 3.0,
                       )),
@@ -137,7 +141,9 @@ class ContactPageTablet extends StatelessWidget {
                         //                   <--- left side
 
                         color: controller.getEmailHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 3.0,
                       )),

@@ -22,11 +22,23 @@ class InitialPageTablet extends StatelessWidget {
                   child: Container(
                     child: AspectRatio(
                       aspectRatio: 0.8,
-                      child: Image.asset(
-                        "images/perfil.png",
-                        // filterQuality: FilterQuality.high,
-                        fit: BoxFit.cover,
-                      ),
+                      child: Get.isDarkMode
+                          ? ColorFiltered(
+                              colorFilter: ColorFilter.mode(
+                                  Colors.grey[100], BlendMode.color),
+                              child: Image.asset(
+                                "images/perfil.png",
+
+                                // filterQuality: FilterQuality.high,
+                                fit: BoxFit.cover,
+                              ),
+                            )
+                          : Image.asset(
+                              "images/perfil.png",
+
+                              // filterQuality: FilterQuality.high,
+                              fit: BoxFit.cover,
+                            ),
                     ),
                   ),
                 ),

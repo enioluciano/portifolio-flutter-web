@@ -23,11 +23,23 @@ class InitialPageMobile extends StatelessWidget {
               height: 350,
               child: AspectRatio(
                 aspectRatio: 0.9,
-                child: Image.asset(
-                  "images/perfil.png",
-                  filterQuality: FilterQuality.high,
-                  fit: BoxFit.cover,
-                ),
+                child: Get.isDarkMode
+                    ? ColorFiltered(
+                        colorFilter:
+                            ColorFilter.mode(Colors.grey[100], BlendMode.color),
+                        child: Image.asset(
+                          "images/perfil.png",
+
+                          // filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover,
+                        ),
+                      )
+                    : Image.asset(
+                        "images/perfil.png",
+
+                        // filterQuality: FilterQuality.high,
+                        fit: BoxFit.cover,
+                      ),
               ),
             ),
           ),
@@ -162,7 +174,9 @@ class InitialPageMobile extends StatelessWidget {
                           onTap: () => controller.urlLaunchGitHub(),
                           child: Icon(
                             FontAwesomeIcons.github,
-                            color: Colors.black,
+                            color: Get.isDarkMode
+                                ? Colors.deepPurple[700]
+                                : Colors.black,
                           ),
                         ),
                         SizedBox(
@@ -185,7 +199,7 @@ class InitialPageMobile extends StatelessWidget {
                           onTap: () => controller.urlLaunchInstagram(),
                           child: Icon(
                             FontAwesomeIcons.instagram,
-                            color: Colors.black,
+                            color: Colors.blueGrey,
                           ),
                         )
                       ],

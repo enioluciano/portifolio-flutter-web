@@ -241,7 +241,7 @@ class WebAppBar extends StatelessWidget {
                               color: Colors.yellow[700],
                             )
                           : Icon(
-                              FontAwesomeIcons.moon,
+                              Icons.nights_stay,
                               color: Colors.deepPurple,
                             ),
                       onPressed: () {

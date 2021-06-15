@@ -77,7 +77,7 @@ class ProjectPublishedWeb extends StatelessWidget {
                       text: "Aguardando",
                       image: "images/mobiance.png",
                       onHover: (value) => controller.setMobianceHover(),
-                      onPressed: () => controller.urlLaunchMobiance(),
+                      onPressed: null,
                       textColor: controller.getMobianceHover
                           ? Colors.white
                           : Colors.blue),

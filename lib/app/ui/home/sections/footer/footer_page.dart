@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FooterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.lightBlueAccent[100],
+      color: Get.isDarkMode ? Colors.grey[700] : Colors.lightBlueAccent[100],
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -13,7 +14,9 @@ class FooterPage extends StatelessWidget {
           ),
           Text(
             'Copyright © ${DateTime.now().year} - Ênio Luciano',
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Get.isDarkMode ? Colors.white : Colors.black,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: 10,

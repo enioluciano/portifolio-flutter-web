@@ -62,7 +62,9 @@ class ContactPageMobile extends StatelessWidget {
                         //                   <--- left side
                         // color: Colors.blue,
                         color: controller.getLocalHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 2.0,
                       )),
@@ -104,7 +106,9 @@ class ContactPageMobile extends StatelessWidget {
                         //                   <--- left side
 
                         color: controller.getPhoneHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 2.0,
                       )),
@@ -144,7 +148,9 @@ class ContactPageMobile extends StatelessWidget {
                         //                   <--- left side
 
                         color: controller.getEmailHover
-                            ? Colors.green
+                            ? Get.isDarkMode
+                                ? corDeepOrange
+                                : Colors.green
                             : Colors.blue,
                         width: 2.0,
                       )),
