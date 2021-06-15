@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/home/sections/about/widgets/custom_row.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
+import '../../home_controller.dart';
+
 class AboutPageWeb extends StatelessWidget {
+  final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +22,7 @@ class AboutPageWeb extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Sobre mim",
+                    'about-me-about-me'.tr,
                     style: TextStyle(
                       fontSize: 40,
                       color: corSection,
@@ -59,7 +63,7 @@ class AboutPageWeb extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                          "Bacharel em Ciência da Computação - Estácio de Sá.",
+                          "about-me-bachelor-science-computer".tr,
                           style: TextStyle(fontSize: 16),
                         ),
                       )
@@ -80,7 +84,7 @@ class AboutPageWeb extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                          "Mestre em Ciência da Computação - Universidade Federal Piauí.",
+                          "about-me-master-science-computer".tr,
                           style: TextStyle(fontSize: 16),
                         ),
                       )
@@ -101,18 +105,14 @@ class AboutPageWeb extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                          "Sou desenvolvedor mobile e professor universitário."
-                          " Sou apaixonado pelo mundo digital e procuro estar sempre atualizado com as novas tecnologias. ",
+                          "about-me-description-me".tr,
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 30,
-                  ),
-                  SizedBox(
-                    height: 30,
+                    height: 60,
                   ),
                   Divider(
                     thickness: 2,
@@ -123,7 +123,7 @@ class AboutPageWeb extends StatelessWidget {
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Linguagens e Tecnologias que ja trabalhei",
+                        "aboute-me-languages-tecnology-worked".tr,
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
@@ -144,7 +144,7 @@ class AboutPageWeb extends StatelessWidget {
                         CustomRow(text: "Cloud Functions"),
                         CustomRow(text: "TypeScript"),
                         CustomRow(text: "JavaScript"),
-                        CustomRow(text: "Api RestFul"),
+                        CustomRow(text: "Api Rest"),
                       ],
                     ),
                   ),

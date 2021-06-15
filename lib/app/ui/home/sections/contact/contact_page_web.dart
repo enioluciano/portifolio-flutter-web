@@ -22,7 +22,7 @@ class ContactPageWeb extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Contato",
+                    "contact-title".tr,
                     style: TextStyle(
                       fontSize: 45,
                       color: corSection,

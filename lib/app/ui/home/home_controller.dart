@@ -35,6 +35,16 @@ class HomeController extends GetxController {
   bool get getContactHover => contactHover.value;
   bool setContactHover() => contactHover.value = !contactHover.value;
 
+  RxBool changeTranslate = false.obs;
+  bool get getChangeTranslate => changeTranslate.value;
+  bool setChangeTranslate() => changeTranslate.value = !changeTranslate.value;
+
+  changeTranslateApp() {
+    changeTranslate.value
+        ? Get.updateLocale(Locale('pt', 'BR'))
+        : Get.updateLocale(Locale('en', 'US'));
+  }
+
   //**
   //  FINISH APPBAR
   //

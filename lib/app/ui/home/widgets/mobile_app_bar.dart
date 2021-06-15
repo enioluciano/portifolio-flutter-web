@@ -3,7 +3,10 @@ import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:portifolio_flutter_web/app/ui/util/themes_service.dart';
 
+import '../home_controller.dart';
+
 class MobileAppBar extends StatelessWidget {
+  final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -28,6 +31,20 @@ class MobileAppBar extends StatelessWidget {
             onPressed: () {
               ThemeService().changeThemeMode();
               // ThemeService().isSavedDarkMode();
+            }),
+        IconButton(
+            icon: Get.isDarkMode
+                ? Icon(
+                    Icons.translate_outlined,
+                    color: Colors.yellow[700],
+                  )
+                : Icon(
+                    Icons.translate,
+                    color: Colors.deepPurple,
+                  ),
+            onPressed: () {
+              controller.setChangeTranslate();
+              controller.changeTranslateApp();
             })
       ],
     );

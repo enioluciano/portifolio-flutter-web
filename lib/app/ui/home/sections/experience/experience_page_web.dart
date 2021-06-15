@@ -11,7 +11,7 @@ class ExperiencePageWeb extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "060 dev",
+          "060",
           style: TextStyle(fontWeight: FontWeight.w700),
         ),
         SizedBox(
@@ -26,7 +26,7 @@ class ExperiencePageWeb extends StatelessWidget {
             SizedBox(
               width: 4,
             ),
-            Expanded(child: Text("Desenvolvedor mobile")),
+            Expanded(child: Text("experience-dev-mobile".tr)),
           ],
         ),
         SizedBox(
@@ -37,7 +37,7 @@ class ExperiencePageWeb extends StatelessWidget {
             Icon(Icons.arrow_right_rounded),
             Expanded(
               child: Text(
-                "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter",
+                "experience-dev-mobile-flutter".tr,
               ),
             ),
           ],
@@ -48,8 +48,7 @@ class ExperiencePageWeb extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Expanded(
-                child: Text("Refatoração e Implementação de novas features")),
+            Expanded(child: Text("experience-refactor".tr)),
           ],
         ),
         SizedBox(
@@ -58,7 +57,7 @@ class ExperiencePageWeb extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Expanded(child: Text("Integração de APIs Rest")),
+            Expanded(child: Text("experience-rest-api-integration".tr)),
           ],
         ),
         SizedBox(
@@ -67,7 +66,7 @@ class ExperiencePageWeb extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Text("Flutter web"),
+            Text("experience-flutter-web".tr),
           ],
         ),
         SizedBox(
@@ -84,7 +83,7 @@ class ExperiencePageWeb extends StatelessWidget {
               width: 4,
             ),
             Text(
-              "Maio 2021 - Atual",
+              "experience-may".tr,
               style: TextStyle(color: Colors.grey, fontSize: 14),
             ),
           ],
@@ -110,7 +109,7 @@ class ExperiencePageWeb extends StatelessWidget {
             SizedBox(
               width: 4,
             ),
-            Expanded(child: Text("Desenvolvedor mobile")),
+            Expanded(child: Text("experience-dev-mobile".tr)),
           ],
         ),
         SizedBox(
@@ -120,8 +119,7 @@ class ExperiencePageWeb extends StatelessWidget {
           children: [
             Icon(Icons.arrow_right_rounded),
             Expanded(
-              child: Text(
-                  "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter"),
+              child: Text("experience-dev-mobile-flutter".tr),
             ),
           ],
         ),
@@ -131,8 +129,7 @@ class ExperiencePageWeb extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Expanded(
-                child: Text("Refatoração e Implementação de novas features")),
+            Expanded(child: Text("experience-refactor".tr)),
           ],
         ),
         SizedBox(
@@ -141,7 +138,7 @@ class ExperiencePageWeb extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Expanded(child: Text("Integração de APIs Rest")),
+            Expanded(child: Text("experience-rest-api-integration".tr)),
           ],
         ),
         SizedBox(
@@ -158,7 +155,7 @@ class ExperiencePageWeb extends StatelessWidget {
               width: 4,
             ),
             Text(
-              "Fev. 2021 - Maio 2021",
+              "experience-february".tr,
               style: TextStyle(color: Colors.grey, fontSize: 14),
             ),
           ],
@@ -184,7 +181,7 @@ class ExperiencePageWeb extends StatelessWidget {
             SizedBox(
               width: 4,
             ),
-            Expanded(child: Text("Desenvolvedor mobile")),
+            Expanded(child: Text("experience-dev-mobile".tr)),
           ],
         ),
         SizedBox(
@@ -194,8 +191,7 @@ class ExperiencePageWeb extends StatelessWidget {
           children: [
             Icon(Icons.arrow_right_rounded),
             Expanded(
-              child: Text(
-                  "Desenvolvimento de aplicativos para dispositivos móveis utilizando Flutter"),
+              child: Text("experience-dev-mobile-flutter".tr),
             ),
           ],
         ),
@@ -205,7 +201,7 @@ class ExperiencePageWeb extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Expanded(child: Text("Integração com Firebase")),
+            Expanded(child: Text("experience-firebase".tr)),
           ],
         ),
         SizedBox(
@@ -214,7 +210,7 @@ class ExperiencePageWeb extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.arrow_right_rounded),
-            Expanded(child: Text("Integração de APIs Rest")),
+            Expanded(child: Text("experience-rest-api-integration".tr)),
           ],
         ),
         SizedBox(
@@ -231,7 +227,7 @@ class ExperiencePageWeb extends StatelessWidget {
               width: 4,
             ),
             Text(
-              "Abril 2020 - Atual",
+              "experience-april".tr,
               style: TextStyle(color: Colors.grey, fontSize: 14),
             ),
           ],
@@ -256,7 +252,7 @@ class ExperiencePageWeb extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Experiência",
+                    "experience-name".tr,
                     style: TextStyle(
                       fontSize: 40,
                       color: corSection,

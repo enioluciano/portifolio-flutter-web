@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
+import 'package:portifolio_flutter_web/app/translations/pt_BR/pt_br_translation.dart';
 import 'package:portifolio_flutter_web/app/ui/home/widgets/item_customize.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:portifolio_flutter_web/app/ui/util/themes_service.dart';
@@ -74,7 +75,7 @@ class WebAppBar extends StatelessWidget {
                   //     )),
 
                   Obx(() => ItemCustomize(
-                        text: "Home",
+                        text: 'appbar-home'.tr,
                         textStyle: TextStyle(
                             color: controller.getHomeHover
                                 ? Colors.blue
@@ -103,7 +104,7 @@ class WebAppBar extends StatelessWidget {
                   //     },
                   //     child: Text("Sobre mim")),
                   Obx(() => ItemCustomize(
-                        text: "Sobre mim",
+                        text: "appbar-about-me".tr,
                         textStyle: TextStyle(
                             color: controller.getAboutMeHover
                                 ? colorB
@@ -132,7 +133,7 @@ class WebAppBar extends StatelessWidget {
                   //     },
                   //     child: Text("Habilidades")),
                   Obx(() => ItemCustomize(
-                        text: "Habilidades",
+                        text: "appbar-skill".tr,
                         textStyle: TextStyle(
                             color: controller.getSkillHover
                                 ? colorB
@@ -163,7 +164,7 @@ class WebAppBar extends StatelessWidget {
                   //     },
                   //     child: Text("Repositórios")),
                   Obx(() => ItemCustomize(
-                        text: "Repositórios",
+                        text: "appbar-repository".tr,
                         textStyle: TextStyle(
                             color: controller.getRepositoryHover
                                 ? colorB
@@ -182,7 +183,7 @@ class WebAppBar extends StatelessWidget {
                     width: 15,
                   ),
                   Obx(() => ItemCustomize(
-                        text: "Experiência",
+                        text: "appbar-experience".tr,
                         textStyle: TextStyle(
                             color: controller.getExpHover
                                 ? colorB
@@ -216,7 +217,7 @@ class WebAppBar extends StatelessWidget {
                   //   width: 15,
                   // ),
                   Obx(() => ItemCustomize(
-                        text: "Contato",
+                        text: "appbar-contact".tr,
                         textStyle: TextStyle(
                             color: controller.getContactHover
                                 ? colorB
@@ -246,6 +247,22 @@ class WebAppBar extends StatelessWidget {
                             ),
                       onPressed: () {
                         ThemeService().changeThemeMode();
+                        // ThemeService().isSavedDarkMode();
+                      }),
+                  IconButton(
+                      icon: Get.isDarkMode
+                          ? Icon(
+                              Icons.translate_outlined,
+                              color: Colors.yellow[700],
+                            )
+                          : Icon(
+                              Icons.translate,
+                              color: Colors.deepPurple,
+                            ),
+                      onPressed: () {
+                        controller.setChangeTranslate();
+                        controller.changeTranslateApp();
+                        // Get.updateLocale(Locale('en', 'US'));
                         // ThemeService().isSavedDarkMode();
                       })
                 ],

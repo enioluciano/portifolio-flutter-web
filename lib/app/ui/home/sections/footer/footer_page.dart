@@ -24,7 +24,7 @@ class FooterPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Feito em Flutter"),
+              Text("contact-footer".tr),
               Icon(
                 Icons.favorite,
                 color: Colors.blue,

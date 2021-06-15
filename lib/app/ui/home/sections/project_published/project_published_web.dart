@@ -23,7 +23,7 @@ class ProjectPublishedWeb extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Apps publicados",
+                    "apps-published-name".tr,
                     style: TextStyle(
                       fontSize: 40,
                       color: corSection,
@@ -92,7 +92,7 @@ class ProjectPublishedWeb extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: Text(
-            "* Alguns projetos não podem ser apresentado devido ao termo de sigilo entre o desenvolvedor e o cliente/empressa",
+            "apps-published-description".tr,
             style: TextStyle(color: Colors.red, fontSize: 10),
           ),
         ),

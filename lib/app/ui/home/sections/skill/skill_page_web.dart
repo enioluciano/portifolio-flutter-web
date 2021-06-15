@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 class SkillPageWeb extends StatelessWidget {
@@ -25,7 +26,7 @@ class SkillPageWeb extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        Text("Versionamento Git",
+        Text("Git",
             style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey)),
       ],
     ),
@@ -124,7 +125,7 @@ class SkillPageWeb extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Habilidades",
+                    "skill-skill".tr,
                     style: TextStyle(
                       fontSize: 40,
                       color: corSection,
