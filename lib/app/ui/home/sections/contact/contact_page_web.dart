@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:portifolio_flutter_web/app/ui/home/home_controller.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
-class ContactPageMobile extends StatelessWidget {
+import '../../home_controller.dart';
+
+class ContactPageWeb extends StatelessWidget {
   final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class ContactPageMobile extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: Divider(height: 3, thickness: 2, color: colorB),
+              child: Divider(height: 3, thickness: 3, color: colorB),
             ),
             Expanded(
               child: Align(
@@ -23,7 +24,7 @@ class ContactPageMobile extends StatelessWidget {
                   child: Text(
                     "Contato",
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 45,
                       color: corSection,
                       fontWeight: FontWeight.bold,
                       // decoration: TextDecoration.underline
@@ -33,7 +34,7 @@ class ContactPageMobile extends StatelessWidget {
             Expanded(
               child: Divider(
                 height: 3,
-                thickness: 2,
+                thickness: 3,
                 color: colorB,
               ),
             ),
@@ -42,7 +43,8 @@ class ContactPageMobile extends StatelessWidget {
         SizedBox(
           height: 40,
         ),
-        Column(
+        Wrap(
+          alignment: WrapAlignment.spaceEvenly,
           children: [
             InkWell(
               onTap: () {},
@@ -54,8 +56,8 @@ class ContactPageMobile extends StatelessWidget {
                 // });
               },
               child: Obx(() => Container(
-                    height: 140,
-                    width: 180,
+                    height: 170,
+                    width: 200,
                     decoration: BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
@@ -64,27 +66,21 @@ class ContactPageMobile extends StatelessWidget {
                         color: controller.getLocalHover
                             ? Colors.green
                             : Colors.blue,
-                        width: 2.0,
+                        width: 3.0,
                       )),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.location_on,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
+                        Icon(Icons.location_on, size: 70),
                         Text("Parnaíba - PI"),
                       ],
                     ),
                   )),
             ),
             SizedBox(
-              height: 25,
+              width: 45,
             ),
             InkWell(
               onTap: () {},
@@ -96,8 +92,8 @@ class ContactPageMobile extends StatelessWidget {
                 // });
               },
               child: Obx(() => Container(
-                    height: 140,
-                    width: 180,
+                    height: 170,
+                    width: 200,
                     decoration: BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
@@ -106,23 +102,20 @@ class ContactPageMobile extends StatelessWidget {
                         color: controller.getPhoneHover
                             ? Colors.green
                             : Colors.blue,
-                        width: 2.0,
+                        width: 3.0,
                       )),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.phone, size: 50),
-                        SizedBox(
-                          height: 20,
-                        ),
+                        Icon(Icons.phone, size: 70),
                         Text("(86) 9 9452-8588"),
                       ],
                     ),
                   )),
             ),
             SizedBox(
-              height: 25,
+              width: 45,
             ),
             InkWell(
               onTap: () {},
@@ -134,8 +127,8 @@ class ContactPageMobile extends StatelessWidget {
                 // });
               },
               child: Obx(() => Container(
-                    height: 140,
-                    width: 180,
+                    height: 170,
+                    width: 200,
                     decoration: BoxDecoration(
                       // borderRadius: BorderRadius.circular(10),
 
@@ -146,17 +139,14 @@ class ContactPageMobile extends StatelessWidget {
                         color: controller.getEmailHover
                             ? Colors.green
                             : Colors.blue,
-                        width: 2.0,
+                        width: 3.0,
                       )),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.email, size: 50),
-                        SizedBox(
-                          height: 20,
-                        ),
+                        Icon(Icons.email, size: 70),
                         Text("eniolucianoo@gmail.com"),
                       ],
                     ),

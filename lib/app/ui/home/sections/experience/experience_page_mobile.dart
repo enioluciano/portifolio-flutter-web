@@ -1,19 +1,9 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import 'package:portifolio_flutter_web/app/models/key.dart';
-import 'package:portifolio_flutter_web/app/ui/home/sections/experience/experience_page_mobile.dart';
-import 'package:portifolio_flutter_web/app/ui/home/sections/experience/experience_page_tablet.dart';
-import 'package:portifolio_flutter_web/app/ui/home/sections/experience/experience_page_web.dart';
-import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:timelines/timelines.dart';
 
-import '../../home_controller.dart';
-
-class ExperiencePage extends StatelessWidget {
-  List<Widget> list = [
+class ExperiencePageMobile extends StatelessWidget {
+  final List<Widget> list = [
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -84,7 +74,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work,
-              size: Get.width <= mobileBreakpoint ? 14 : 18,
+              size: 14,
               color: Colors.green,
             ),
             SizedBox(
@@ -92,9 +82,7 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Maio 2021 - Atual",
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
+              style: TextStyle(color: Colors.grey, fontSize: 10),
             ),
           ],
         )
@@ -160,7 +148,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work_off_outlined,
-              size: Get.width <= mobileBreakpoint ? 14 : 18,
+              size: 14,
               color: Colors.red,
             ),
             SizedBox(
@@ -168,9 +156,7 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Fev. 2021 - Maio 2021",
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
+              style: TextStyle(color: Colors.grey, fontSize: 10),
             ),
           ],
         )
@@ -235,7 +221,7 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Icon(
               Icons.work,
-              size: Get.width <= mobileBreakpoint ? 14 : 18,
+              size: 14,
               color: Colors.green,
             ),
             SizedBox(
@@ -243,9 +229,7 @@ class ExperiencePage extends StatelessWidget {
             ),
             Text(
               "Abril 2020 - Atual",
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: Get.width <= mobileBreakpoint ? 10 : 14),
+              style: TextStyle(color: Colors.grey, fontSize: 10),
             ),
           ],
         )
@@ -253,16 +237,70 @@ class ExperiencePage extends StatelessWidget {
     ),
   ];
 
-  var x = {"janeiro": "Testando", "fevereiro": "Testando"};
-  final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
-    return Container(
-        key: JosKey.keyExperience,
-        child: Get.width <= mobileBreakpoint
-            ? ExperiencePageMobile()
-            : Get.width < tabletBreakPoint
-                ? ExperiencePageTablet()
-                : ExperiencePageWeb());
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Divider(height: 3, thickness: 3, color: colorB),
+            ),
+            Expanded(
+              flex: 2,
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Experiência",
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: corSection,
+                      fontWeight: FontWeight.bold,
+                      // decoration: TextDecoration.underline
+                    ),
+                  )),
+            ),
+            Expanded(
+              child: Divider(
+                height: 3,
+                thickness: 3,
+                color: colorB,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 80,
+        ),
+        FixedTimeline.tileBuilder(
+          builder: TimelineTileBuilder.connectedFromStyle(
+            contentsAlign: ContentsAlign.alternating,
+            // oppositeContentsBuilder: (context, index) =>
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: Text("aaa: ${x[index]}"),
+            // ),
+            contentsBuilder: (context, index) => Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  side: BorderSide(color: Colors.blue[100])),
+              elevation: 10,
+              shadowColor: colorB,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: list[index],
+              ),
+            ),
+            connectorStyleBuilder: (context, index) => ConnectorStyle.solidLine,
+            indicatorStyleBuilder: (context, index) => IndicatorStyle.outlined,
+            itemCount: list.length,
+          ),
+        ),
+        SizedBox(
+          height: 60,
+        ),
+      ],
+    );
   }
 }

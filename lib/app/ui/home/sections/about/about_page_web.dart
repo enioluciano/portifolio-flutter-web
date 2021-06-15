@@ -1,41 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio_flutter_web/app/models/key.dart';
+import 'package:portifolio_flutter_web/app/ui/home/sections/about/widgets/custom_row.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
-import 'widgets/custom_row.dart';
-
-class AboutPageMobile extends StatelessWidget {
+class AboutPageWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: JosKey.keyAbout,
       children: [
         Row(
           children: [
             Expanded(
-                child: Divider(
-              thickness: 2,
-              height: 3,
-              color: colorB,
-            )),
-            Expanded(
-              flex: 2,
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Sobre mim",
-                  style: TextStyle(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.bold,
-                      color: colorB),
-                  // textAlign: TextAlign.center,
-                ),
-              ),
+              child: Divider(height: 3, thickness: 3, color: colorB),
             ),
             Expanded(
-                child: Divider(
-              thickness: 2,
-              height: 3,
-              color: colorB,
-            )),
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Sobre mim",
+                    style: TextStyle(
+                      fontSize: 40,
+                      color: corSection,
+                      fontWeight: FontWeight.bold,
+                      // decoration: TextDecoration.underline
+                    ),
+                  )),
+            ),
+            Expanded(
+              child: Divider(
+                height: 3,
+                thickness: 3,
+                color: colorB,
+              ),
+            ),
           ],
         ),
         SizedBox(
@@ -62,7 +60,7 @@ class AboutPageMobile extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Bacharel em Ciência da Computação - Estácio de Sá.",
-                          style: TextStyle(fontSize: 14),
+                          style: TextStyle(fontSize: 16),
                         ),
                       )
                     ],
@@ -83,7 +81,7 @@ class AboutPageMobile extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Mestre em Ciência da Computação - Universidade Federal Piauí.",
-                          style: TextStyle(fontSize: 14),
+                          style: TextStyle(fontSize: 16),
                         ),
                       )
                     ],
@@ -105,7 +103,7 @@ class AboutPageMobile extends StatelessWidget {
                         child: Text(
                           "Sou desenvolvedor mobile e professor universitário."
                           " Sou apaixonado pelo mundo digital e procuro estar sempre atualizado com as novas tecnologias. ",
-                          style: TextStyle(fontSize: 14),
+                          style: TextStyle(fontSize: 16),
                         ),
                       ),
                     ],
@@ -127,7 +125,7 @@ class AboutPageMobile extends StatelessWidget {
                       child: Text(
                         "Linguagens e Tecnologias que ja trabalhei",
                         style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                             color: colorB),
                       )),

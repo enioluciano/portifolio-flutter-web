@@ -3,7 +3,7 @@ import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 import 'widgets/custom_row.dart';
 
-class AboutPageMobile extends StatelessWidget {
+class AboutPageTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -111,10 +111,7 @@ class AboutPageMobile extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 30,
-                  ),
-                  SizedBox(
-                    height: 30,
+                    height: 60,
                   ),
                   Divider(
                     thickness: 2,

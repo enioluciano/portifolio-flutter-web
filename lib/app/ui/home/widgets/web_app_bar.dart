@@ -235,13 +235,18 @@ class WebAppBar extends StatelessWidget {
                     width: 15,
                   ),
                   IconButton(
-                      icon: Icon(
-                        FontAwesomeIcons.moon,
-                        color: Colors.deepPurple,
-                      ),
+                      icon: Get.isDarkMode
+                          ? Icon(
+                              Icons.wb_sunny_outlined,
+                              color: Colors.yellow[700],
+                            )
+                          : Icon(
+                              FontAwesomeIcons.moon,
+                              color: Colors.deepPurple,
+                            ),
                       onPressed: () {
                         ThemeService().changeThemeMode();
-                        ThemeService().isSavedDarkMode();
+                        // ThemeService().isSavedDarkMode();
                       })
                 ],
               ),
