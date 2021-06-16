@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
-import 'package:portifolio_flutter_web/app/translations/pt_BR/pt_br_translation.dart';
 import 'package:portifolio_flutter_web/app/ui/home/widgets/item_customize.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 import 'package:portifolio_flutter_web/app/ui/util/themes_service.dart';
-
 import '../home_controller.dart';
 
 class WebAppBar extends StatelessWidget {
@@ -55,31 +52,15 @@ class WebAppBar extends StatelessWidget {
                 ],
               ),
             ),
-            // Text(" <Ênio Luciano>",
-            //     style: GoogleFonts.roboto(textStyle: TextStyle(fontSize: 18))),
             Container(
               child: Row(
                 children: [
-                  // TextButton(
-                  //     style: ButtonStyle(
-                  //       enableFeedback: true,
-                  //       animationDuration: Duration(seconds: 3),
-                  //     ),
-                  //     onPressed: () {
-                  //       Scrollable.ensureVisible(JosKey.keyHome.currentContext,
-                  //           duration: Duration(seconds: 1));
-                  //     },
-                  //     child: Text(
-                  //       "Home",
-                  //       style: TextStyle(color: Colors.grey),
-                  //     )),
-
                   Obx(() => ItemCustomize(
                         text: 'appbar-home'.tr,
                         textStyle: TextStyle(
                             color: controller.getHomeHover
                                 ? Colors.blue
-                                : Colors.grey[600],
+                                : Colors.grey[500],
                             fontSize: 14),
                         visible: controller.getHomeHover,
                         backgroundColor: Colors.blue,
@@ -93,22 +74,12 @@ class WebAppBar extends StatelessWidget {
                   SizedBox(
                     width: 15,
                   ),
-                  // TextButton(
-                  //     style: ButtonStyle(
-                  //       enableFeedback: true,
-                  //       animationDuration: Duration(seconds: 3),
-                  //     ),
-                  //     onPressed: () {
-                  //       Scrollable.ensureVisible(JosKey.keyAbout.currentContext,
-                  //           duration: Duration(seconds: 1));
-                  //     },
-                  //     child: Text("Sobre mim")),
                   Obx(() => ItemCustomize(
                         text: "appbar-about-me".tr,
                         textStyle: TextStyle(
                             color: controller.getAboutMeHover
                                 ? colorB
-                                : Colors.grey[700],
+                                : Colors.grey[500],
                             fontSize: 14),
                         visible: controller.getAboutMeHover,
                         backgroundColor: Colors.blue,
@@ -122,22 +93,12 @@ class WebAppBar extends StatelessWidget {
                   SizedBox(
                     width: 15,
                   ),
-                  // TextButton(
-                  //     style: ButtonStyle(
-                  //       enableFeedback: true,
-                  //       animationDuration: Duration(seconds: 3),
-                  //     ),
-                  //     onPressed: () {
-                  //       Scrollable.ensureVisible(JosKey.keySkill.currentContext,
-                  //           duration: Duration(seconds: 1));
-                  //     },
-                  //     child: Text("Habilidades")),
                   Obx(() => ItemCustomize(
                         text: "appbar-skill".tr,
                         textStyle: TextStyle(
                             color: controller.getSkillHover
                                 ? colorB
-                                : Colors.grey[700],
+                                : Colors.grey[500],
                             fontSize: 14),
                         visible: controller.getSkillHover,
                         backgroundColor: Colors.blue,
@@ -148,27 +109,15 @@ class WebAppBar extends StatelessWidget {
                               duration: Duration(seconds: 1));
                         },
                       )),
-
                   SizedBox(
                     width: 15,
                   ),
-                  // TextButton(
-                  //     style: ButtonStyle(
-                  //       enableFeedback: true,
-                  //       animationDuration: Duration(seconds: 3),
-                  //     ),
-                  //     onPressed: () {
-                  //       Scrollable.ensureVisible(
-                  //           JosKey.keyRepository.currentContext,
-                  //           duration: Duration(seconds: 1));
-                  //     },
-                  //     child: Text("Repositórios")),
                   Obx(() => ItemCustomize(
                         text: "appbar-repository".tr,
                         textStyle: TextStyle(
                             color: controller.getRepositoryHover
                                 ? colorB
-                                : Colors.grey[700],
+                                : Colors.grey[500],
                             fontSize: 14),
                         visible: controller.getRepositoryHover,
                         backgroundColor: Colors.blue,
@@ -187,7 +136,7 @@ class WebAppBar extends StatelessWidget {
                         textStyle: TextStyle(
                             color: controller.getExpHover
                                 ? colorB
-                                : Colors.grey[700],
+                                : Colors.grey[500],
                             fontSize: 14),
                         visible: controller.getExpHover,
                         backgroundColor: Colors.blue,
@@ -198,30 +147,15 @@ class WebAppBar extends StatelessWidget {
                               duration: Duration(seconds: 1));
                         },
                       )),
-
                   SizedBox(
                     width: 15,
                   ),
-                  // TextButton(
-                  //     style: ButtonStyle(
-                  //       enableFeedback: true,
-                  //       animationDuration: Duration(seconds: 3),
-                  //     ),
-                  //     onPressed: () {
-                  //       Scrollable.ensureVisible(
-                  //           JosKey.keyExperience.currentContext,
-                  //           duration: Duration(seconds: 1));
-                  //     },
-                  //     child: Text("Experience")),
-                  // SizedBox(
-                  //   width: 15,
-                  // ),
                   Obx(() => ItemCustomize(
                         text: "appbar-contact".tr,
                         textStyle: TextStyle(
                             color: controller.getContactHover
                                 ? colorB
-                                : Colors.grey[700],
+                                : Colors.grey[500],
                             fontSize: 14),
                         visible: controller.getContactHover,
                         backgroundColor: colorB,
@@ -239,7 +173,7 @@ class WebAppBar extends StatelessWidget {
                       icon: Get.isDarkMode
                           ? Icon(
                               Icons.wb_sunny_outlined,
-                              color: Colors.yellow[700],
+                              color: Colors.yellow[500],
                             )
                           : Icon(
                               Icons.nights_stay,
@@ -249,22 +183,43 @@ class WebAppBar extends StatelessWidget {
                         ThemeService().changeThemeMode();
                         // ThemeService().isSavedDarkMode();
                       }),
-                  IconButton(
-                      icon: Get.isDarkMode
-                          ? Icon(
-                              Icons.translate_outlined,
-                              color: Colors.yellow[700],
-                            )
-                          : Icon(
-                              Icons.translate,
-                              color: Colors.deepPurple,
-                            ),
-                      onPressed: () {
-                        controller.setChangeTranslate();
+                  SizedBox(
+                    width: 15,
+                  ),
+                  InkWell(
+                      highlightColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      onTap: () {
                         controller.changeTranslateApp();
-                        // Get.updateLocale(Locale('en', 'US'));
-                        // ThemeService().isSavedDarkMode();
-                      })
+                        controller.setChangeTranslate();
+                      },
+                      child: Obx(
+                        () => controller.getChangeTranslate
+                            ? Image.asset(
+                                "images/brazil.png",
+                                height: 45,
+                                width: 40,
+                              )
+                            : Image.asset(
+                                "images/euaP.png",
+                                height: 50,
+                                width: 45,
+                              ),
+                      ))
+                  // IconButton(
+                  //     icon: Get.isDarkMode
+                  //         ? Icon(
+                  //             Icons.translate_outlined,
+                  //             color: Colors.yellow[500],
+                  //           )
+                  //         : Icon(
+                  //             Icons.translate,
+                  //             color: Colors.deepPurple,
+                  //           ),
+                  //     onPressed: () {
+                  //       controller.setChangeTranslate();
+                  //       controller.changeTranslateApp();
+                  //     })
                 ],
               ),
             )

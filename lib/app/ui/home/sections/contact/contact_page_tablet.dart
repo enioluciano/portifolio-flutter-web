@@ -22,9 +22,9 @@ class ContactPageTablet extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Contato",
+                    "contact-title".tr,
                     style: TextStyle(
-                      fontSize: 45,
+                      fontSize: 22,
                       color: corSection,
                       fontWeight: FontWeight.bold,
                       // decoration: TextDecoration.underline
@@ -76,6 +76,9 @@ class ContactPageTablet extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.location_on, size: 70),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text("Parnaíba - PI"),
                       ],
                     ),
@@ -113,6 +116,9 @@ class ContactPageTablet extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.phone, size: 70),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text("(86) 9 9452-8588"),
                       ],
                     ),
@@ -153,6 +159,9 @@ class ContactPageTablet extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.email, size: 70),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text("eniolucianoo@gmail.com"),
                       ],
                     ),

@@ -25,7 +25,7 @@ class RepositoriesMobilePage extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Repositórios",
+                    "repository-repository".tr,
                     style: TextStyle(
                       fontSize: 22,
                       color: corSection,
@@ -90,7 +90,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              "App voltado para as tarefas.",
+                              "repository-friedge".tr,
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 14),
                             ),
@@ -160,7 +160,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "App voltado para listar tarefas",
+                            "repository-todo".tr,
                             style: TextStyle(color: Colors.grey, fontSize: 14),
                           ),
                           SizedBox(
@@ -229,7 +229,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "App com apenas UI",
+                            "repository-blog".tr,
                             style: TextStyle(color: Colors.grey, fontSize: 14),
                           ),
                           SizedBox(
@@ -298,7 +298,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "Meu Portifólio",
+                            "repository-portfolio".tr,
                             style: TextStyle(color: Colors.grey, fontSize: 14),
                           ),
                           SizedBox(
@@ -368,7 +368,7 @@ class RepositoriesMobilePage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "Cards Pokemon",
+                            "repository-pokemon".tr,
                             style: TextStyle(color: Colors.grey, fontSize: 14),
                           ),
                           SizedBox(

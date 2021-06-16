@@ -6,6 +6,9 @@ final Map<String, String> ptBr = {
   'appbar-experience': "Experiência",
   'appbar-contact': "Contato",
 
+  /********** -------Welcome-------- */
+  'welcome-welcome': "Seja Bem-vindo!",
+
   /********** --------INITIAL------- */
   'initial-dev-mobile': "Desenvolvedor de Aplicativos Móveis",
   'initial-teacher-university': "Professor Universitário",

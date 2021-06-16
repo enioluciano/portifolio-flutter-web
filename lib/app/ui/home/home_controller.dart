@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:portifolio_flutter_web/app/ui/util/themes_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeController extends GetxController {
@@ -165,4 +166,19 @@ class HomeController extends GetxController {
           "https://github.com/enioluciano/ProjetoPokemon")
       ? await launch("https://github.com/enioluciano/ProjetoPokemon")
       : throw 'Could not launch https://github.com/enioluciano/ProjetoPokemon';
+
+  verifyDarkModeHour() {
+    if (DateTime.now().hour >= 18 || DateTime.now().hour <= 6) {
+      if (!Get.isDarkMode) ThemeService().changeThemeMode();
+    } else {
+      if (Get.isDarkMode) ThemeService().changeThemeMode();
+    }
+  }
+
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    verifyDarkModeHour();
+  }
 }

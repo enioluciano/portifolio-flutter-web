@@ -91,7 +91,7 @@ class InitialPageTablet extends StatelessWidget {
                         ),
                         Expanded(
                           child: Text(
-                            "Desenvolvedor de aplicativos móveis",
+                            "initial-dev-mobile".tr,
                             style: TextStyle(
                                 fontFamily: "Roboto-light",
                                 fontWeight: FontWeight.w400,
@@ -112,7 +112,7 @@ class InitialPageTablet extends StatelessWidget {
                         ),
                         Expanded(
                           child: Text(
-                            "Professor Universitário",
+                            "initial-teacher-university".tr,
                             style: TextStyle(
                                 fontFamily: "Roboto-light",
                                 fontWeight: FontWeight.w400,
@@ -132,7 +132,7 @@ class InitialPageTablet extends StatelessWidget {
                           size: 30,
                         ),
                         Text(
-                          "Freelancer",
+                          "initial-freelancer".tr,
                           style: TextStyle(
                               fontFamily: "Roboto-light",
                               fontWeight: FontWeight.w400,
@@ -151,7 +151,7 @@ class InitialPageTablet extends StatelessWidget {
                           size: 30,
                         ),
                         Text(
-                          "Parnaíba - PI",
+                          "initial-parnaiba-pi".tr,
                           style: TextStyle(
                               fontFamily: "Roboto-light",
                               fontWeight: FontWeight.w400,

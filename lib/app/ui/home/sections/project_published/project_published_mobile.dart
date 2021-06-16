@@ -14,14 +14,14 @@ class ProjectPublishedMobile extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: Divider(height: 3, thickness: 3, color: colorB),
+              child: Divider(height: 3, thickness: 2, color: colorB),
             ),
             Expanded(
               flex: 2,
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Apps publicados",
+                    "apps-published-name".tr,
                     style: TextStyle(
                       fontSize: 18,
                       color: corSection,
@@ -32,7 +32,7 @@ class ProjectPublishedMobile extends StatelessWidget {
             Expanded(
               child: Divider(
                 height: 3,
-                thickness: 3,
+                thickness: 2,
                 color: colorB,
               ),
             ),
@@ -98,7 +98,17 @@ class ProjectPublishedMobile extends StatelessWidget {
         ),
         SizedBox(
           height: 70,
-        )
+        ),
+        Align(
+          alignment: Alignment.center,
+          child: Text(
+            "apps-published-description".tr,
+            style: TextStyle(color: Colors.red, fontSize: 10),
+          ),
+        ),
+        SizedBox(
+          height: 80,
+        ),
       ],
     );
   }

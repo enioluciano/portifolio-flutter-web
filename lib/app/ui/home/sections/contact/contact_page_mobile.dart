@@ -21,7 +21,7 @@ class ContactPageMobile extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Contato",
+                    "contact-title".tr,
                     style: TextStyle(
                       fontSize: 22,
                       color: corSection,

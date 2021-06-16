@@ -13,7 +13,7 @@ class MobileAppBar extends StatelessWidget {
       elevation: 0,
       backgroundColor: Get.isDarkMode ? Colors.black : Colors.white,
       title: Text(
-        "Seja Bem-vindo!",
+        "welcome-welcome".tr,
         style: TextStyle(color: colorB),
       ),
       centerTitle: true,
@@ -32,20 +32,46 @@ class MobileAppBar extends StatelessWidget {
               ThemeService().changeThemeMode();
               // ThemeService().isSavedDarkMode();
             }),
-        IconButton(
-            icon: Get.isDarkMode
-                ? Icon(
-                    Icons.translate_outlined,
-                    color: Colors.yellow[700],
-                  )
-                : Icon(
-                    Icons.translate,
-                    color: Colors.deepPurple,
-                  ),
-            onPressed: () {
-              controller.setChangeTranslate();
-              controller.changeTranslateApp();
-            })
+        SizedBox(
+          width: 15,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: 16.0),
+          child: InkWell(
+              highlightColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              onTap: () {
+                controller.changeTranslateApp();
+                controller.setChangeTranslate();
+              },
+              child: Obx(
+                () => controller.getChangeTranslate
+                    ? Image.asset(
+                        "images/brazil.png",
+                        height: 45,
+                        width: 40,
+                      )
+                    : Image.asset(
+                        "images/euaP.png",
+                        height: 50,
+                        width: 45,
+                      ),
+              )),
+        )
+        // IconButton(
+        //     icon: Get.isDarkMode
+        //         ? Icon(
+        //             Icons.translate_outlined,
+        //             color: Colors.yellow[700],
+        //           )
+        //         : Icon(
+        //             Icons.translate,
+        //             color: Colors.deepPurple,
+        //           ),
+        //     onPressed: () {
+        //       controller.setChangeTranslate();
+        //       controller.changeTranslateApp();
+        //     })
       ],
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
-
+import 'package:get/get.dart';
 import 'widgets/custom_row.dart';
 
 class AboutPageTablet extends StatelessWidget {
@@ -21,7 +21,7 @@ class AboutPageTablet extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Sobre mim",
+                  'about-me-about-me'.tr,
                   style: TextStyle(
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
@@ -61,7 +61,7 @@ class AboutPageTablet extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                          "Bacharel em Ciência da Computação - Estácio de Sá.",
+                          "about-me-bachelor-science-computer".tr,
                           style: TextStyle(fontSize: 14),
                         ),
                       )
@@ -82,7 +82,7 @@ class AboutPageTablet extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                          "Mestre em Ciência da Computação - Universidade Federal Piauí.",
+                          "about-me-master-science-computer".tr,
                           style: TextStyle(fontSize: 14),
                         ),
                       )
@@ -103,8 +103,7 @@ class AboutPageTablet extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                          "Sou desenvolvedor mobile e professor universitário."
-                          " Sou apaixonado pelo mundo digital e procuro estar sempre atualizado com as novas tecnologias. ",
+                          "about-me-description-me".tr,
                           style: TextStyle(fontSize: 14),
                         ),
                       ),
@@ -122,7 +121,7 @@ class AboutPageTablet extends StatelessWidget {
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Linguagens e Tecnologias que ja trabalhei",
+                        "aboute-me-languages-tecnology-worked".tr,
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,

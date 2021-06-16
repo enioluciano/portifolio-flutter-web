@@ -6,6 +6,9 @@ final Map<String, String> enUs = {
   'appbar-experience': "Experience",
   'appbar-contact': "Contact",
 
+  /********** -------Welcome-------- */
+  'welcome-welcome': "Welcome!",
+
   /************ ---INITIAL-- */
 
   'initial-dev-mobile': "Developer Mobile",

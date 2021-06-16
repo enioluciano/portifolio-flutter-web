@@ -136,7 +136,7 @@ class SkillPageTablet extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Habilidades",
+                    "skill-skill".tr,
                     style: TextStyle(
                       fontSize: 22,
                       color: corSection,
