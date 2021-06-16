@@ -11,6 +11,7 @@ class MobileAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
+      iconTheme: IconThemeData(color: Get.isDarkMode ? Colors.white : colorB),
       backgroundColor: Get.isDarkMode ? Colors.black : Colors.white,
       title: Text(
         "welcome-welcome".tr,
@@ -33,7 +34,7 @@ class MobileAppBar extends StatelessWidget {
               // ThemeService().isSavedDarkMode();
             }),
         SizedBox(
-          width: 15,
+          width: 8,
         ),
         Padding(
           padding: const EdgeInsets.only(right: 16.0),
@@ -48,30 +49,16 @@ class MobileAppBar extends StatelessWidget {
                 () => controller.getChangeTranslate
                     ? Image.asset(
                         "images/brazil.png",
-                        height: 45,
-                        width: 40,
+                        height: 40,
+                        width: 35,
                       )
                     : Image.asset(
                         "images/euaP.png",
-                        height: 50,
-                        width: 45,
+                        height: 40,
+                        width: 35,
                       ),
               )),
         )
-        // IconButton(
-        //     icon: Get.isDarkMode
-        //         ? Icon(
-        //             Icons.translate_outlined,
-        //             color: Colors.yellow[700],
-        //           )
-        //         : Icon(
-        //             Icons.translate,
-        //             color: Colors.deepPurple,
-        //           ),
-        //     onPressed: () {
-        //       controller.setChangeTranslate();
-        //       controller.changeTranslateApp();
-        //     })
       ],
     );
   }

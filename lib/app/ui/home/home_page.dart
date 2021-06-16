@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio_flutter_web/app/models/key.dart';
+import 'package:portifolio_flutter_web/app/ui/home/widgets/drawer_custom.dart';
 
 import 'package:portifolio_flutter_web/app/ui/util/breakpoints.dart';
 
@@ -34,7 +35,8 @@ class HomePage extends GetView<HomeController> {
                   child: WebAppBar(),
                   preferredSize:
                       Size(double.infinity, AppBar().preferredSize.height)),
-          // drawer: constraits.maxWidth < mobileBreakpoint ? Drawer() : null,
+          drawer:
+              constraits.maxWidth < tabletBreakPoint ? DrawerCustom() : null,
           body: SingleChildScrollView(
             child: Center(
               child: Column(

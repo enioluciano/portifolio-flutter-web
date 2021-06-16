@@ -9,6 +9,9 @@ final Map<String, String> enUs = {
   /********** -------Welcome-------- */
   'welcome-welcome': "Welcome!",
 
+  /********** -------Drawer-------- */
+  'drawer-drawer': "Hello, visitor!",
+
   /************ ---INITIAL-- */
 
   'initial-dev-mobile': "Developer Mobile",

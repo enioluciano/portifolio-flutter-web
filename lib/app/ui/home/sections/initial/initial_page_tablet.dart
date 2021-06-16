@@ -198,7 +198,20 @@ class InitialPageTablet extends StatelessWidget {
                             FontAwesomeIcons.instagram,
                             color: Colors.blueGrey,
                           ),
-                        )
+                        ),
+                        SizedBox(
+                          width: 40,
+                        ),
+                        InkWell(
+                          overlayColor:
+                              MaterialStateProperty.all(Colors.transparent),
+                          onTap: () => controller.urlLaunchCnpq(),
+                          child: Image.asset(
+                            "images/cnpP.png",
+                            height: 100,
+                            width: 70,
+                          ),
+                        ),
                       ],
                     ),
                   ],

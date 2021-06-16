@@ -9,6 +9,9 @@ final Map<String, String> ptBr = {
   /********** -------Welcome-------- */
   'welcome-welcome': "Seja Bem-vindo!",
 
+  /********** -------Drawer-------- */
+  'drawer-drawer': "Olá, visitante!",
+
   /********** --------INITIAL------- */
   'initial-dev-mobile': "Desenvolvedor de Aplicativos Móveis",
   'initial-teacher-university': "Professor Universitário",

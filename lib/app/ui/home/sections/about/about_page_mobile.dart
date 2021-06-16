@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portifolio_flutter_web/app/models/key.dart';
 import 'package:portifolio_flutter_web/app/ui/util/preferences.dart';
 
 import 'widgets/custom_row.dart';
@@ -8,6 +9,7 @@ class AboutPageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: JosKey.keyAbout,
       children: [
         Row(
           children: [

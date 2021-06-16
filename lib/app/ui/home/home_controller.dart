@@ -129,6 +129,12 @@ class HomeController extends GetxController {
       await canLaunch("https://www.instagram.com/enio.luciano/")
           ? await launch("https://www.instagram.com/enio.luciano/")
           : throw 'Could not launch https://www.instagram.com/enio.luciano/';
+
+  void urlLaunchCnpq() async => await canLaunch(
+          "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8983918U4&tokenCaptchar=03AGdBq26dQqrQ0WXlf4wT59KmWvJk-jDkEFSnRPynkRz21E72LDGIsJb5FhhHaaqm2HuN2BJncSKPqNSn4kmdmDbXZC8jdHBsjqN_Gqg_XMkEWGlG-bkO4sLBuGPCd-u45ywSMZPh9KGJhiOoHP_4G2bKqdGHnvqujCBhb9cHzEwj3FZunZ77oopDO2_O6Hp05Hp58GlhKd_Qll52AEVmkQy1ivUbni6NqqUFgy_yRLG0kNpfABvBlbd-KGsrj8LEAvdsIKXrJ_g6zdyIO8_PeNeiBOZQrmEicMudGwr3Ep2YmETnx1V5wkgX0AQ1v4xQSbjrA_xJOtN-roxDqkPuMHWokKPbokWmhR5Pwd12wZXqVV08T5FebzV7k5t1BvBUxoOJ-soEzwIgsBbMtyZ2U9pj2rSonOt9niI9XalG10u1Mb-vnB6LmdtkmU79ti2SMOMfm3XXNuFB9xwIgfX5D4qnSbU_vLgTZIQAy9PwVLS5m7evsy03AZr2-KIAwMMA9LyzzVKs1xn_iY5p0seg4zM-rmnPrfx0iA")
+      ? await launch(
+          "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8983918U4&tokenCaptchar=03AGdBq26dQqrQ0WXlf4wT59KmWvJk-jDkEFSnRPynkRz21E72LDGIsJb5FhhHaaqm2HuN2BJncSKPqNSn4kmdmDbXZC8jdHBsjqN_Gqg_XMkEWGlG-bkO4sLBuGPCd-u45ywSMZPh9KGJhiOoHP_4G2bKqdGHnvqujCBhb9cHzEwj3FZunZ77oopDO2_O6Hp05Hp58GlhKd_Qll52AEVmkQy1ivUbni6NqqUFgy_yRLG0kNpfABvBlbd-KGsrj8LEAvdsIKXrJ_g6zdyIO8_PeNeiBOZQrmEicMudGwr3Ep2YmETnx1V5wkgX0AQ1v4xQSbjrA_xJOtN-roxDqkPuMHWokKPbokWmhR5Pwd12wZXqVV08T5FebzV7k5t1BvBUxoOJ-soEzwIgsBbMtyZ2U9pj2rSonOt9niI9XalG10u1Mb-vnB6LmdtkmU79ti2SMOMfm3XXNuFB9xwIgfX5D4qnSbU_vLgTZIQAy9PwVLS5m7evsy03AZr2-KIAwMMA9LyzzVKs1xn_iY5p0seg4zM-rmnPrfx0iA")
+      : throw 'Could not launch http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8983918U4&tokenCaptchar=03AGdBq26dQqrQ0WXlf4wT59KmWvJk-jDkEFSnRPynkRz21E72LDGIsJb5FhhHaaqm2HuN2BJncSKPqNSn4kmdmDbXZC8jdHBsjqN_Gqg_XMkEWGlG-bkO4sLBuGPCd-u45ywSMZPh9KGJhiOoHP_4G2bKqdGHnvqujCBhb9cHzEwj3FZunZ77oopDO2_O6Hp05Hp58GlhKd_Qll52AEVmkQy1ivUbni6NqqUFgy_yRLG0kNpfABvBlbd-KGsrj8LEAvdsIKXrJ_g6zdyIO8_PeNeiBOZQrmEicMudGwr3Ep2YmETnx1V5wkgX0AQ1v4xQSbjrA_xJOtN-roxDqkPuMHWokKPbokWmhR5Pwd12wZXqVV08T5FebzV7k5t1BvBUxoOJ-soEzwIgsBbMtyZ2U9pj2rSonOt9niI9XalG10u1Mb-vnB6LmdtkmU79ti2SMOMfm3XXNuFB9xwIgfX5D4qnSbU_vLgTZIQAy9PwVLS5m7evsy03AZr2-KIAwMMA9LyzzVKs1xn_iY5p0seg4zM-rmnPrfx0iA';
   void urlLaunchLinkendIn() async =>
       await canLaunch("https://www.linkedin.com/in/enio-barbosa/")
           ? await launch("https://www.linkedin.com/in/enio-barbosa/")
