@@ -55,7 +55,8 @@ final Map<String, String> ptBr = {
   'experience-flutter-web': "Flutter Web",
   'experience-february': "Fev. 2020 - Maio 2021",
   'experience-april': "Abril 2020 - Atual",
-  'experience-may': "Maio 2021 - Atual",
+  'experience-may': "Maio 2021 - Julho 2021",
+  'experience-july': "Julho 2021 - Atual",
 
   /********** -------Contact-------- */
   'contact-title': "Contato",

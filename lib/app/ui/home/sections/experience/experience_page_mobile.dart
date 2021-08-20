@@ -9,6 +9,84 @@ class ExperiencePageMobile extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
+          "HortaTech",
+          style: TextStyle(fontWeight: FontWeight.w700),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            Icon(
+              Icons.brightness_1,
+              size: 8,
+            ),
+            SizedBox(
+              width: 4,
+            ),
+            Expanded(
+                child: Text(
+              "experience-dev-mobile".tr,
+              style: TextStyle(fontSize: 14),
+            )),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            Icon(Icons.arrow_right_rounded),
+            Expanded(
+              child: Text(
+                "experience-dev-mobile-flutter".tr,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            Icon(Icons.arrow_right_rounded),
+            Expanded(child: Text("experience-refactor".tr)),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            Icon(Icons.arrow_right_rounded),
+            Expanded(child: Text("experience-rest-api-integration".tr)),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            Icon(
+              Icons.work,
+              size: 18,
+              color: Colors.green,
+            ),
+            SizedBox(
+              width: 4,
+            ),
+            Text(
+              "experience-july".tr,
+              style: TextStyle(color: Colors.grey, fontSize: 10),
+            ),
+          ],
+        )
+      ],
+    ),
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
           "060 dev",
           style: TextStyle(fontWeight: FontWeight.w700),
         ),

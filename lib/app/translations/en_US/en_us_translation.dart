@@ -54,7 +54,8 @@ final Map<String, String> enUs = {
   'experience-flutter-web': "Flutter Web",
   'experience-february': "Feb. 2020 - May 2021",
   'experience-april': "April 2020 - Current",
-  'experience-may': "May 2021 - Current",
+  'experience-may': "May 2021 - July 2021",
+  'experience-july': "July 2021 - Current",
 
   /********** -------Contact-------- */
   'contact-title': "Contact",

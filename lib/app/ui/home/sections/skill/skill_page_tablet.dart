@@ -121,6 +121,45 @@ class SkillPageTablet extends StatelessWidget {
                 fontSize: 13, fontWeight: FontWeight.w400, color: Colors.grey)),
       ],
     ),
+    Column(
+      children: [
+        Icon(
+          Icons.brightness_1_outlined,
+          size: 60,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text("Clean Architecture",
+            style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey)),
+      ],
+    ),
+    Column(
+      children: [
+        Icon(
+          Icons.pattern,
+          size: 60,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text("Design Patterns",
+            style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey)),
+      ],
+    ),
+    Column(
+      children: [
+        Icon(
+          Icons.settings,
+          size: 60,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text("Tests",
+            style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey)),
+      ],
+    ),
   ];
   @override
   Widget build(BuildContext context) {
